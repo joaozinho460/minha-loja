@@ -1,7 +1,7 @@
 /* ============================================================
-   MAXIMIANO · Casa & Lifestyle — Componentes partilhados
-   (não é preciso alterar este ficheiro)
-   ============================================================ */
+    MAXIMIANO · Casa & Lifestyle — Componentes partilhados
+    (não é preciso alterar este ficheiro)
+    ============================================================ */
 
 const KAIROS_PLACEHOLDER = 'COLOCAR_LINK_DA_KAIROS_AQUI';
 
@@ -12,9 +12,11 @@ function isKairosPlaceholder(link) {
 /* ---------- Preço ---------- */
 function precoHTML(produto) {
   const desc = calcularDesconto(produto);
-  let html = '<span class="price">' + formatarPreco(produto.preco) + '</span>';
+  const moeda = LOJA.simboloMoeda || '€';
+  
+  let html = '<span class="price">' + moeda + ' ' + (typeof produto.preco === 'number' ? produto.preco.toFixed(2).replace('.', ',') : produto.preco) + '</span>';
   if (produto.precoAnterior && produto.precoAnterior > produto.preco) {
-    html += ' <span class="old">' + formatarPreco(produto.precoAnterior) + '</span>';
+    html += ' <span class="old">' + moeda + ' ' + (typeof produto.precoAnterior === 'number' ? produto.precoAnterior.toFixed(2).replace('.', ',') : produto.precoAnterior) + '</span>';
   }
   if (desc > 0) html += ' <span class="badge badge-disc">-' + desc + '%</span>';
   return html;
@@ -190,14 +192,14 @@ function initFooter() {
     if (LOJA.email) {
       html +=
         '<li><a href="mailto:' + LOJA.email + '">' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7M2 7v12a2 2 0 002 2h16a2 2 0 002-2V7"/></svg>' +
         LOJA.email +
         '</a></li>';
     }
     if (LOJA.instagram && LOJA.instagram !== '#') {
       html +=
         '<li><a href="' + LOJA.instagram + '" target="_blank" rel="noopener nofollow">' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5"/></svg>' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M17 7h.01"/></svg>' +
         'Instagram</a></li>';
     }
     contato.innerHTML = html || '<li>Contacta-nos pelo e-mail da loja</li>';
