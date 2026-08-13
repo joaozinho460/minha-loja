@@ -41,9 +41,80 @@ const LOJA = {
   tiktok: '#',
   footerDescricao:
     'Produtos selecionados para tornar a tua casa mais confortável, bonita e funcional. Compra simples, segura e acompanhada.',
+  moeda: 'BRL',
+  simboloMoeda: 'R$',
 };
 
 const PRODUTOS = [
+  {
+    id: 'luminaria-solar-jardim',
+    nome: 'Luminária Solar de Parede para Jardim',
+    categoria: 'Iluminação',
+    preco: 104.00,
+    precoAnterior: 119.60,
+    desconto: null,
+    destaque: true,
+    bestseller: true,
+    imagens: [
+      'images/produtos/luminaria-solar-jardim.jpg',
+      'images/produtos/luminaria-solar-jardim-2.jpg',
+      'images/produtos/luminaria-solar-jardim-3.jpg',
+      'images/produtos/luminaria-solar-jardim-4.jpg',
+    ],
+    curto: 'Ilumine o seu jardim, varanda ou entrada com uma luminária solar elegante, sem fios e sem gastar energia.',
+    descricao:
+      'A Luminária Solar de Parede para Jardim é uma solução prática e elegante para iluminar áreas externas da sua casa. Com iluminação direcionada para cima e para baixo, cria um efeito luminoso moderno e aconchegante. Funciona com energia solar, sem necessidade de ligação elétrica, tornando-se uma opção sustentável e económica para jardins, varandas, entradas, muros e corredores externos.',
+    beneficios: [
+      'Funcionamento alimentado por energia solar — sem custos de electricidade',
+      'Não precisa de fios ou ligação elétrica — instalação simples',
+      'Iluminação para cima e para baixo — efeito visual profissional',
+      'Ideal para jardins, varandas, entradas e áreas externas',
+      'Design moderno em plástico ABS resistente — durável e elegante',
+      'Bateria recarregável Ni-MH 600mAh — até 8 horas de iluminação',
+      'LEDs SMD brancos — luz quente e aconchegante',
+    ],
+    comoFunciona: [
+      { titulo: 'Instale na parede', texto: 'Escolha um local externo adequado e fixe a luminária na parede com parafusos ou fita dupla face.' },
+      { titulo: 'Deixe carregar durante o dia', texto: 'O painel solar aproveita a luz do sol para carregar a bateria interna (mais de 6 horas sob luz solar direta).' },
+      { titulo: 'Aproveite à noite', texto: 'Após o carregamento, a luminária utiliza a energia armazenada para iluminar o ambiente durante toda a noite.' },
+    ],
+    porqueEscolher: [
+      'Ajuda a iluminar áreas externas sem precisar de uma tomada — solução sustentável',
+      'Visual moderno com iluminação direcionada para cima e para baixo — cria atmosfera',
+      'Painel solar 2V/200mA com bateria 600mAh — eficiente e duradouro',
+      'Pode ser utilizada em diferentes espaços externos — versátil',
+      'Uma forma simples e ecológica de valorizar a aparência da sua casa',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'A luminária precisa ser ligada na tomada?',
+        r: 'Não. O produto utiliza energia solar e possui bateria interna recarregável. É 100% autossuficiente.',
+      },
+      {
+        p: 'Onde posso instalar?',
+        r: 'Pode ser utilizada em áreas externas como jardins, varandas, entradas, muros, corredores e fachadas. Qualquer local onde receba luz solar durante o dia.',
+      },
+      {
+        p: 'Ela possui iluminação para cima e para baixo?',
+        r: 'Sim. O modelo foi desenvolvido especificamente para criar iluminação direcionada para cima e para baixo, criando um efeito visual único.',
+      },
+      {
+        p: 'Quanto tempo dura a bateria?',
+        r: 'Com a bateria completamente carregada, a luminária funciona entre 8 a 10 horas de iluminação contínua durante a noite.',
+      },
+      {
+        p: 'Qual é o tipo de luz?',
+        r: 'A luminária emite luz branca quente (warm white), ideal para criar uma atmosfera aconchegante e acolhedora.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/HGRkX1GgMKmU',
+  },
+
   {
     id: 'luminaria-aurora',
     nome: 'Luminária LED Aurora',
@@ -60,7 +131,7 @@ const PRODUTOS = [
     ],
     curto: 'Iluminação quente e regulável para criar o ambiente perfeito em qualquer divisão.',
     descricao:
-      'A Luminária LED Aurora combina um design minimalista com tecnologia de regulação tátil. Com três temperaturas de luz e intensidade ajustável, adapta-se à tua secretária, sala ou quarto, criando sempre o clima certo — do foco de trabalho ao relaxamento da noite.',
+      'A Luminária LED Aurora combina um design minimalista com tecnologia de regulação tátil. Com três temperaturas de luz e intensidade ajustável, adapta-se à tua secretária, sala ou quarto.',
     beneficios: [
       'Controlo tátil simples: um toque liga, um deslize regula a intensidade',
       '3 temperaturas de luz: branca, neutra e quente',
@@ -112,7 +183,7 @@ const PRODUTOS = [
     ],
     curto: 'Névoa fina e silenciosa para uma casa tranquila e com aroma a descanso.',
     descricao:
-      'O Difusor Casa Serena transforma o teu espaço num refúgio de calma. A tecnologia ultra-sónica liberta uma névoa fina e silenciosa que humedece o ambiente enquanto difunde o aroma do teu óleo essencial favorito. Com luz ambiente ajustável, é perfeito para a sala, o quarto ou o escritório.',
+      'O Difusor Casa Serena transforma o teu espaço num refúgio de calma. A tecnologia ultra-sónica liberta uma névoa fina e silenciosa que humedece o ambiente enquanto difunde o aroma do teu óleo essencial favorito.',
     beneficios: [
       'Funcionamento ultra-sónico quase silencioso',
       'Luz ambiente regulável em várias cores',
@@ -164,7 +235,7 @@ const PRODUTOS = [
     ],
     curto: 'O teu café quente durante horas, na mesa ou em movimento.',
     descricao:
-      'A Caneca Térmica ThermalKeep usa parede dupla em aço inoxidável para manter a temperatura ideal do teu café ou chá muito mais tempo. A tampa anti-derrame fecha em rotação e o acabamento mate é agradável ao toque e fácil de segurar.',
+      'A Caneca Térmica ThermalKeep usa parede dupla em aço inoxidável para manter a temperatura ideal do teu café ou chá muito mais tempo. A tampa anti-derrame fecha em rotação e o acabamento mate oferece um design elegante.',
     beneficios: [
       'Mantém bebidas quentes até 6 horas e frias até 12',
       'Parede dupla em aço inoxidável, sem condensação exterior',
@@ -212,7 +283,7 @@ const PRODUTOS = [
     ],
     curto: 'Toque macio e aconchego imediato para o sofá ou a cama.',
     descricao:
-      'O Cobertor Plush Comfort envolve-te numa camada de conforto suave. Feito em microfibra plush, é leve, quente e agradável ao toque — perfeito para tardes no sofá, noites frias ou uma sesta de qualidade.',
+      'O Cobertor Plush Comfort envolve-te numa camada de conforto suave. Feito em microfibra plush, é leve, quente e agradável ao toque — perfeito para tardes no sofá, noites frias ou uma sesta relaxante.',
     beneficios: [
       'Microfibra plush extra macia ao toque',
       'Leve e térmico, ideal para todas as estações',
@@ -308,7 +379,7 @@ const PRODUTOS = [
     ],
     curto: 'Uma secretária impecável, sem esforço. Tudo no seu lugar.',
     descricao:
-      'O Organizador de Mesa Minimalist coloca ordem no teu espaço de trabalho. Com compartimentos pensados para telemóvel, canetas, post-its e pequenos acessórios, mantém tudo acessível e visível, com um design limpo que valoriza a tua secretária.',
+      'O Organizador de Mesa Minimalist coloca ordem no teu espaço de trabalho. Com compartimentos pensados para telemóvel, canetas, post-its e pequenos acessórios, mantém tudo acessível e visível.',
     beneficios: [
       'Múltiplos compartimentos para arrumar de tudo',
       'Suporte dedicado para telemóvel e utensílios',
@@ -346,7 +417,10 @@ const PRODUTOS = [
    ============================================================ */
 
 function formatarPreco(valor) {
-  return '€ ' + (typeof valor === 'number' ? valor.toFixed(2).replace('.', ',') : valor);
+  if (typeof valor === 'number') {
+    return LOJA.simboloMoeda + ' ' + valor.toFixed(2).replace('.', ',');
+  }
+  return valor;
 }
 
 function calcularDesconto(produto) {
