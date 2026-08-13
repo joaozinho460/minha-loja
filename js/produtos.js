@@ -721,6 +721,61 @@ const PRODUTOS = [
     kairosLink: 'https://pay.kaiross.com.br/kwaJx8yBqy0B',
   },
 
+  {
+    id: 'filtro-agua-dispenser-automatico',
+    nome: 'Filtro de Água Dispenser Automático Alta Potência Bivolt (Cores Sortidas)',
+    categoria: 'Cozinha',
+    preco: 55.73,
+    precoAnterior: 64.09,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/bomba_de_agua1.jpg',
+      'images/produtos/bomba_de_agua2.jpg',
+      'images/produtos/bomba_de_agua3.jpg',
+      'images/produtos/bomba_de_agua4.jpg',
+      'images/produtos/bomba_de_agua5.jpg',
+    ],
+    curto: 'Filtra e dispensa água de forma prática e automática, com alta potência e bivolt.',
+    descricao:
+      'O Filtro de Água Dispenser Automático traz praticidade para o seu dia a dia. Com alta potência e funcionamento bivolt, dispensa água filtrada de forma automática e rápida, ideal para a cozinha, o escritório ou a área de serviço. Disponível em cores sortidas, combina com diferentes ambientes e torna o momento de beber água muito mais cômodo.',
+    beneficios: [
+      'Dispensa água de forma automática e prática',
+      'Alta potência com funcionamento bivolt (110V e 220V)',
+      'Filtra a água, deixando-a mais limpa e saborosa',
+      'Fácil de instalar e usar no dia a dia',
+      'Compacto e discreto para diversos ambientes',
+      'Economia e comodidade na hora de beber água',
+    ],
+    comoFunciona: [
+      { titulo: 'Instala o filtro', texto: 'Conecta o dispenser à entrada de água seguindo as instruções do manual.' },
+      { titulo: 'Liga o aparelho', texto: 'Conecta à tomada; o bivolt funciona em 110V ou 220V automaticamente.' },
+      { titulo: 'Dispensa água filtrada', texto: 'Pressiona para obter água filtrada de forma rápida e automática.' },
+    ],
+    porqueEscolher: [
+      'Água limpa e fresca sempre à mão',
+      'Dispensação automática sem esforço',
+      'Design prático para cozinha e escritório',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'O aparelho funciona em qualquer tomada?',
+        r: 'Sim. O dispenser é bivolt, funcionando em 110V e 220V automaticamente.',
+      },
+      {
+        p: 'Precisa de instalação profissional?',
+        r: 'Não. A instalação é simples e pode ser feita seguindo as instruções do manual.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/fN89KcMEQjJG',
+  },
+
   /* ---------- AROMAS (completar 7) ---------- */
 
   {
