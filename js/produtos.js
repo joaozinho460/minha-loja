@@ -692,6 +692,81 @@ const PRODUTOS = [
     ],
     kairosLink: 'https://pay.kaiross.com.br/q2deCZYKikNA',
   },
+  {
+    id: 'conjunto-facas-6-pecas',
+    nome: 'Conjunto de Facas 6 Peças, Aço Inoxidável com Revestimento Antiaderente, Cabo Ergonômico, Inclui Faca do Chef, Cutelo, Tesoura Multifuncional e Estojo',
+    categoria: 'Cozinha',
+    preco: 70.24,
+    precoAnterior: 80.78,
+    desconto: null,
+    destaque: false,
+    bestseller: false,
+    imagens: [
+      'images/produtos/facas-1.jpg',
+      'images/produtos/facas-2.jpg',
+      'images/produtos/facas-3.jpg',
+      'images/produtos/facas-4.jpg',
+      'images/produtos/facas-5.jpg',
+      'images/produtos/facas-6.jpg',
+      'images/produtos/facas-7.jpg',
+      'images/produtos/facas-8.jpg',
+    ],
+    curto: 'Kit profissional com 6 facas de aço inoxidável antiaderente, cabo ergonômico e estojo organizador.',
+    descricao:
+      'O Conjunto de Facas 6 Peças é um kit profissional completo para a sua cozinha. As lâminas são em aço inoxidável com revestimento antiaderente, garantindo maior durabilidade e desempenho superior no corte. O cabo com textura em borracha macia e formato anatômico proporciona conforto e precisão durante o uso prolongado. O kit inclui faca do chef, faca de carne, cutelo, faca para descascar, descascador de cerâmica e tesoura multifuncional — com funções de corte, abridor de garrafas e quebra-nozes. Tudo acompanhado de um estojo organizador para guardar os utensílios de forma segura e organizada.',
+    beneficios: [
+      'Conjunto completo: kit profissional com 6 peças para todas as tarefas da cozinha',
+      'Material premium: lâminas em aço inoxidável com revestimento antiaderente',
+      'Design ergonômico: cabo com textura em borracha macia e formato anatômico',
+      'Versatilidade: tesoura multifuncional com corte, abridor de garrafas e quebra-nozes',
+      'Armazenamento prático: acompanha estojo organizador para guardar os utensílios',
+      'Inclui faca do chef, faca de carne, cutelo, faca para descascar e descascador de cerâmica',
+    ],
+    comoFunciona: [
+      { titulo: 'Escolhe a faca certa', texto: 'Cada peça do conjunto tem uma função: chef, carne, cutelo, descascar ou tesoura.' },
+      { titulo: 'Corta com precisão', texto: 'As lâminas em aço inoxidável antiaderente garantem cortes precisos e duradouros.' },
+      { titulo: 'Guarda no estojo', texto: 'Depois de usar e lavar à mão, guarda todas as peças no estojo organizador.' },
+    ],
+    porqueEscolher: [
+      'Kit completo com 6 peças para todas as necessidades da cozinha',
+      'Aço inoxidável com revestimento antiaderente para maior durabilidade',
+      'Cabo ergonômico com borracha macia para conforto no uso prolongado',
+      'Tesoura multifuncional versátil: corta, abre garrafas e quebra nozes',
+      'Estojo organizador inclusivo para armazenamento seguro',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Quantas peças tem o conjunto?',
+        r: 'O conjunto tem 6 peças: faca do chef, faca de carne, cutelo, faca para descascar, descascador de cerâmica e tesoura multifuncional.',
+      },
+      {
+        p: 'Qual é o material das lâminas?',
+        r: 'As lâminas são em aço inoxidável com revestimento antiaderente, garantindo maior durabilidade e desempenho superior no corte.',
+      },
+      {
+        p: 'O cabo é confortável?',
+        r: 'Sim. O cabo tem textura em borracha macia e formato anatômico, proporcionando conforto e precisão durante o uso prolongado.',
+      },
+      {
+        p: 'O que a tesoura multifuncional faz?',
+        r: 'Além de cortar, a tesoura funciona como abridor de garrafas e quebra-nozes, sendo ideal para diversas tarefas na cozinha.',
+      },
+      {
+        p: 'Vem estojo para guardar?',
+        r: 'Sim. O kit acompanha um estojo organizador para guardar todos os utensílios de forma segura e organizada.',
+      },
+      {
+        p: 'Como devo cuidar das facas?',
+        r: 'Recomenda-se lavar à mão após o uso e secar antes de guardar no estojo.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/Y7VabRy5REws',
+  },
 ];
 
 /* ============================================================
