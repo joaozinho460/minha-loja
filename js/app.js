@@ -3,7 +3,7 @@
     Pesquisa + limite visual de 34 produtos
     ============================================================ */
 
-const MAX_PRODUTOS = 40;
+const MAX_PRODUTOS = 44;
 
 function renderHomeGrids() {
   const dest = document.getElementById('gridDestaques');

@@ -1887,6 +1887,222 @@ const PRODUTOS = [
     ],
     kairosLink: 'COLOCAR_LINK_DA_KAIROS_AQUI',
   },
+
+  {
+    id: 'lampada-emergencia-led-15w',
+    nome: 'Lâmpada de Emergência LED 15W',
+    categoria: 'Iluminação',
+    preco: 45.68,
+    precoAnterior: 52.53,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/lampada1.jpg',
+      'images/produtos/lampada2.jpg',
+      'images/produtos/lampada3.jpg',
+    ],
+    curto: 'Luz de emergência LED que mantém o ambiente iluminado durante quedas de energia.',
+    descricao:
+      'A Lâmpada de Emergência LED 15W garante iluminação imediata quando falta energia. Com tecnologia LED de alto rendimento, acende automaticamente na queda de energia e oferece boa autonomia, sendo perfeita para casa, comércio, corredores e áreas externas. Recarregável e eficiente, é uma solução prática para nunca ficar no escuro.',
+    beneficios: [
+      'Acende automaticamente durante quedas de energia',
+      'Tecnologia LED 15W de alto rendimento',
+      'Recarregável e eficiente no consumo',
+      'Instalação simples, como uma lâmpada comum',
+      'Ideal para casa, comércio e áreas externas',
+      'Boas horas de autonomia com bateria interna',
+    ],
+    comoFunciona: [
+      { titulo: 'Instala', texto: 'Enrosca no bocal como uma lâmpada comum, com a tomada conectada.' },
+      { titulo: 'Recarrega', texto: 'Fica carregando enquanto há energia na rede elétrica.' },
+      { titulo: 'Ilumina na queda', texto: 'Acende automaticamente quando a energia acaba.' },
+    ],
+    porqueEscolher: [
+      'Nunca fica no escuro durante quedas de energia',
+      'Economia com tecnologia LED',
+      'Fácil de instalar e usar',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Acende sozinha quando falta energia?',
+        r: 'Sim. A lâmpada acende automaticamente assim que a energia elétrica é interrompida.',
+      },
+      {
+        p: 'Precisa de instalação especial?',
+        r: 'Não. Ela instala como uma lâmpada comum e recarrega enquanto está ligada à rede.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/TUEmiSpNMMlv',
+  },
+
+  {
+    id: 'luminaria-solar-foguete-alta-potencia',
+    nome: 'Luminária Solar LED Tipo Foguete – 12 Divisões de Alta Potência – Sensor de Presença',
+    categoria: 'Iluminação',
+    preco: 393.04,
+    precoAnterior: 452.0,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/luminaria_de_altapressao1.jpg',
+      'images/produtos/luminaria_de_altapressao2.jpg',
+      'images/produtos/luminaria_de_altapressao3.jpg',
+      'images/produtos/luminaria_de_altapressao4.jpg',
+    ],
+    curto: 'Iluminação solar potente com sensor de presença para áreas externas sem fiação.',
+    descricao:
+      'A Luminária Solar LED Tipo Foguete ilumina grandes áreas externas sem necessidade de fiação elétrica. Com 12 divisões de alta potência e sensor de presença, acende automaticamente quando detecta movimento, garantindo segurança e economia de energia. Carrega durante o dia com energia solar e funciona à noite, perfeita para quintais, garagens, jardins e fachadas.',
+    beneficios: [
+      'Alta potência com 12 divisões de LEDs',
+      'Sensor de presença com acendimento automático',
+      'Carregamento por energia solar, sem fiação',
+      'Resistente à chuva e ao clima externo',
+      'Economia total na conta de luz',
+      'Ideal para quintais, garagens, jardins e fachadas',
+    ],
+    comoFunciona: [
+      { titulo: 'Instala', texto: 'Fixa em local externo com boa incidência de sol.' },
+      { titulo: 'Carrega', texto: 'As placas solares carregam a bateria durante o dia.' },
+      { titulo: 'Acende', texto: 'O sensor de presença liga a luz automaticamente à noite.' },
+    ],
+    porqueEscolher: [
+      'Segurança e iluminação sem custo de energia',
+      'Instalação fácil sem fiação elétrica',
+      'Potência para áreas externas amplas',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Precisa de fiação elétrica?',
+        r: 'Não. A luminária funciona com energia solar, sem necessidade de fiação.',
+      },
+      {
+        p: 'Funciona em dias nublados?',
+        r: 'Sim. Ela armazena energia ao longo do dia e acende à noite, mesmo em dias de menos sol.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/lPlDxDUJJkyy',
+  },
+
+  {
+    id: 'mini-camera-seguranca-a9-wifi',
+    nome: 'Mini Câmera de Segurança Fixa Espiã A9 Wi-Fi FullHD 90° com Suporte de Parede',
+    categoria: 'Decoração',
+    preco: 67.01,
+    precoAnterior: 77.06,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/camera1.jpg',
+      'images/produtos/camera2.jpg',
+      'images/produtos/camera3.jpg',
+      'images/produtos/camera4.jpg',
+      'images/produtos/camera5.jpg',
+    ],
+    curto: 'Câmera Wi-Fi compacta em FullHD com ângulo de 90° e suporte de parede.',
+    descricao:
+      'A Mini Câmera de Segurança Fixa Espiã A9 monitora seu ambiente em FullHD com ângulo de visão de 90°. Conectada via Wi-Fi, permite acompanhar o espaço em tempo real pelo celular. Compacta e discreta, vem com suporte de parede para fácil instalação em casa, comércio ou escritório, trazendo mais segurança e tranquilidade ao seu dia a dia.',
+    beneficios: [
+      'Gravação em FullHD com visão de 90°',
+      'Conexão Wi-Fi com visualização pelo celular',
+      'Design compacto e discreto',
+      'Suporte de parede incluído',
+      'Fácil de instalar e configurar',
+      'Monitoramento em tempo real onde estiver',
+    ],
+    comoFunciona: [
+      { titulo: 'Instala', texto: 'Fixa a câmera no suporte de parede no local desejado.' },
+      { titulo: 'Conecta', texto: 'Vincula a câmera ao Wi-Fi e configura no aplicativo do celular.' },
+      { titulo: 'Monitora', texto: 'Acompanha o ambiente em tempo real pelo celular, de onde estiver.' },
+    ],
+    porqueEscolher: [
+      'Mais segurança em casa, comércio ou escritório',
+      'Imagem FullHD e acesso remoto pelo celular',
+      'Instalação rápida com suporte de parede',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Como acesso as imagens?',
+        r: 'Pelo aplicativo no celular, após conectar a câmera à sua rede Wi-Fi.',
+      },
+      {
+        p: 'Precisa de fiação?',
+        r: 'A câmera é conectada à energia e transmite as imagens pela rede Wi-Fi.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/q537SCj8v0OZ',
+  },
+
+  {
+    id: 'luminaria-abajur-cristal-touch-retro',
+    nome: 'RETRÔ - Luminária Abajur Cristal Led Touch Recarregável USB',
+    categoria: 'Iluminação',
+    preco: 102.48,
+    precoAnterior: 117.85,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/retrô_luz1.jpg',
+      'images/produtos/retrô_luz2.jpg',
+      'images/produtos/retrô_luz3.jpg',
+      'images/produtos/retrô_luz4.jpg',
+    ],
+    curto: 'Abajur de cristal com luz LED touch, recarregável via USB e toque retrô.',
+    descricao:
+      'A Luminária Abajur Cristal Led Touch une o charme retrô à praticidade moderna. Com luz LED ajustável por toque, é recarregável via USB e pode ser usada em qualquer lugar, sem depender de tomada. O design de cristal cria um efeito sofisticado na decoração, ideal para mesas de cabeceira, salas, home offices e pontos de destaque da casa.',
+    beneficios: [
+      'Controle de luz por toque',
+      'Recarregável via USB, sem fios',
+      'Design de cristal sofisticado',
+      'Luz LED ajustável em várias intensidades',
+      'Portátil para usar em qualquer ambiente',
+      'Toque retrô que valoriza a decoração',
+    ],
+    comoFunciona: [
+      { titulo: 'Carrega', texto: 'Conecta o cabo USB para recarregar a bateria interna.' },
+      { titulo: 'Acende por toque', texto: 'Toca no corpo da luminária para ligar e ajustar a luz.' },
+      { titulo: 'Leva aonde quiser', texto: 'Usa em qualquer lugar, sem precisar de tomada por perto.' },
+    ],
+    porqueEscolher: [
+      'Iluminação charmosa e sem fios',
+      'Design retrô de cristal que encanta',
+      'Portátil e prática para toda a casa',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Funciona sem tomada?',
+        r: 'Sim. A luminária é recarregável via USB e funciona por horas sem estar conectada.',
+      },
+      {
+        p: 'Como ajusto a luz?',
+        r: 'Basta tocar no corpo da luminária para ligar, desligar e alternar as intensidades da luz LED.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/0ELjPIanFLmk',
+  },
 ];
 
 /* ============================================================
