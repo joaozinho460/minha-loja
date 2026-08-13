@@ -623,6 +623,75 @@ const PRODUTOS = [
     ],
     kairosLink: 'COLOCAR_LINK_DA_KAIROS_AQUI',
   },
+  {
+    id: 'tabua-descongelar-ultra-rapida',
+    nome: 'Tábua Mágica para Descongelar Carnes e Legumes para Cozinha, Bandeja para Descongelamento Ultra Rápido',
+    categoria: 'Cozinha',
+    preco: 44.9,
+    precoAnterior: null,
+    desconto: null,
+    destaque: false,
+    bestseller: false,
+    imagens: [
+      'images/produtos/tabua_descongelar-1.jpg',
+      'images/produtos/tabua_descongelar-2.jpg',
+      'images/produtos/tabua_descongelar-3.jpg',
+      'images/produtos/tabua_descongelar-4.jpg',
+      'images/produtos/tabua_descongelar-5.jpg',
+      'images/produtos/tabua_descongelar-6.jpg',
+    ],
+    curto: 'Bandeja que descongela carnes e legumes até 3 vezes mais rápido, preservando o sabor original dos alimentos.',
+    descricao:
+      'A Tábua Mágica para Descongelar Carnes e Legumes é a bandeja para descongelamento ultra rápido que transforma a sua rotina na cozinha. Feita para acelerar o processo de descongelamento, ela descongela os alimentos até 3 vezes mais rápido do que o método tradicional, mantendo a qualidade original dos alimentos. Basta colocar o alimento congelado sobre a bandeja e esperar — sem precisar de micro-ondas, água quente ou eletricidade. Perfeita para carnes, peixes, frangos, legumes e qualquer outro tipo de alimento, é a solução prática para quem quer economizar tempo na hora de preparar as refeições.',
+    beneficios: [
+      'Descongelamento ultrarrápido: até 3 vezes mais rápido que o método tradicional',
+      'Sabor preservado: mantém a qualidade original dos alimentos',
+      'Economize tempo: prepare suas refeições rapidamente',
+      'Para todos os tamanhos: perfeita para qualquer tipo de alimento',
+      'Uso simples: basta colocar o alimento sobre a bandeja e esperar',
+      'Sem micro-ondas, água quente ou eletricidade',
+    ],
+    comoFunciona: [
+      { titulo: 'Coloca o alimento', texto: 'Retira o alimento congelado e coloca-o sobre a bandeja de descongelamento.' },
+      { titulo: 'Espera', texto: 'A bandeja acelera o descongelamento sem alterar a qualidade do alimento.' },
+      { titulo: 'Prepara a refeição', texto: 'Em pouco tempo o alimento está pronto para ser temperado e cozinhado.' },
+    ],
+    porqueEscolher: [
+      'Descongela alimentos até 3 vezes mais rápido, poupando tempo na cozinha',
+      'Preserva o sabor e a qualidade original dos alimentos',
+      'Funciona para carnes, peixes, frangos, legumes e mais',
+      'Sem eletricidade, sem micro-ondas e sem água quente',
+      'Uso simples e intuitivo para qualquer pessoa',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Como funciona a tábua mágica?',
+        r: 'Basta colocar o alimento congelado sobre a bandeja e esperar. A tábua acelera o processo de descongelamento sem precisar de eletricidade, micro-ondas ou água quente.',
+      },
+      {
+        p: 'Que tipo de alimentos posso descongelar?',
+        r: 'A tábua é perfeita para qualquer tipo de alimento, incluindo carnes, peixes, frangos, legumes e outros alimentos congelados.',
+      },
+      {
+        p: 'O produto preserva o sabor dos alimentos?',
+        r: 'Sim. A tábua mantém a qualidade original dos alimentos, preservando o sabor durante o descongelamento.',
+      },
+      {
+        p: 'Quanto tempo demora a descongelar?',
+        r: 'O tempo varia conforme o tamanho e o tipo do alimento, mas a tábua descongela até 3 vezes mais rápido do que o método tradicional.',
+      },
+      {
+        p: 'Preciso de eletricidade?',
+        r: 'Não. O produto funciona sem eletricidade, sem micro-ondas e sem água quente — uso simples e seguro.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/q2deCZYKikNA',
+  },
 ];
 
 /* ============================================================
