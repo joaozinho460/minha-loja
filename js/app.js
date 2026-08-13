@@ -1,7 +1,7 @@
 /* ============================================================
-   MAXIMIANO · Casa & Lifestyle — Página inicial
-   Pesquisa + limite visual de 34 produtos
-   ============================================================ */
+    MAXIMIANO · Casa & Lifestyle — Página inicial
+    Pesquisa + limite visual de 34 produtos
+    ============================================================ */
 
 const MAX_PRODUTOS = 34;
 
@@ -36,7 +36,7 @@ function initProductSearch() {
   let lastQuery = '';
 
   function search() {
-    const query = input.value.trim().toLocaleLowerCase('pt-PT');
+    const query = input.value.trim().toLowerCase();
     lastQuery = query;
 
     if (!query) {
@@ -48,12 +48,22 @@ function initProductSearch() {
     }
 
     const encontrados = PRODUTOS.filter((p) => {
-      const texto = [p.nome, p.categoria, p.curto, p.descricao].join(' ').toLocaleLowerCase('pt-PT');
+      const texto = [
+        p.nome,
+        p.categoria,
+        p.curto,
+        p.descricao,
+        ...(p.beneficios || [])
+      ]
+        .join(' ')
+        .toLowerCase();
       return texto.includes(query);
     }).slice(0, MAX_PRODUTOS);
 
     results.classList.add('active');
-    if (count) count.textContent = encontrados.length + (encontrados.length === 1 ? ' produto encontrado' : ' produtos encontrados');
+    if (count) {
+      count.textContent = encontrados.length + (encontrados.length === 1 ? ' produto encontrado' : ' produtos encontrados');
+    }
 
     if (!encontrados.length) {
       results.innerHTML = '';
@@ -76,14 +86,19 @@ function initProductSearch() {
   });
 
   const form = input.closest('form');
-  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); search(); });
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      search();
+    });
+  }
 }
 
 function renderHomeFaq() {
   const faq = [
     {
       p: 'Como é feito o pagamento?',
-      r: 'Ao clicares em "Comprar agora", és redirecionado para uma página de pagamento segura, onde concluis a compra. O pagamento é processado integralmente nessa plataforma — nunca pedimos dados de cartão neste site.',
+      r: 'Ao clicares em "Comprar agora", és redirecionado para uma página de pagamento segura, onde concluis a compra. O pagamento é processado integralmente nessa plataforma — nunca pedimos dados bancários diretamente.',
     },
     {
       p: 'Preciso de criar uma conta para comprar?',
