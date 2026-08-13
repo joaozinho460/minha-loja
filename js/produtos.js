@@ -2103,6 +2103,58 @@ const PRODUTOS = [
     ],
     kairosLink: 'https://pay.kaiross.com.br/0ELjPIanFLmk',
   },
+
+  {
+    id: 'luminaria-branca-mesa-6w',
+    nome: 'Luminária Branca Mesa 6W',
+    categoria: 'Iluminação',
+    preco: 85.0,
+    precoAnterior: 97.75,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/luminaria-mesa-branca1.jpg',
+      'images/produtos/luminaria-mesa-branca2.jpg',
+      'images/produtos/luminaria-mesa-branca3.jpg',
+    ],
+    curto: 'Luminária de mesa com luz LED de 6W, elegante e compacta para qualquer ambiente.',
+    descricao:
+      'A Luminária Branca Mesa 6W traz iluminação LED eficiente e um design limpo e moderno para mesas de cabeceira, escrivaninhas e mesas de apoio. Compacta e leve, ilumina bem o espaço de trabalho ou leitura com baixo consumo de energia, sendo uma peça prática e decorativa para qualquer divisão da casa.',
+    beneficios: [
+      'Luz LED de 6W com baixo consumo',
+      'Design branco moderno e discreto',
+      'Compacta, ideal para mesas e escrivaninhas',
+      'Perfeita para leitura e trabalho',
+      'Fácil de usar e transportar entre ambientes',
+    ],
+    comoFunciona: [
+      { titulo: 'Posiciona', texto: 'Coloca a luminária sobre a mesa ou escrivaninha no local desejado.' },
+      { titulo: 'Liga', texto: 'Conecta à tomada e acende a luz LED.' },
+      { titulo: 'Ajusta', texto: 'Posiciona o braço ou o difusor para iluminar exatamente o que precisa.' },
+    ],
+    porqueEscolher: [
+      'Iluminação eficiente e econômica',
+      'Design moderno que valoriza o ambiente',
+      'Praticidade para o dia a dia',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'É adequada para leitura?',
+        r: 'Sim. A luz LED de 6W oferece boa iluminação para leitura, estudo e trabalho.',
+      },
+      {
+        p: 'Ocupa muito espaço?',
+        r: 'Não. O design compacto se adapta bem a mesas de cabeceira, escrivaninhas e mesas de apoio.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/458JMDEXF1Go',
+  },
 ];
 
 /* ============================================================
