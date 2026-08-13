@@ -2156,6 +2156,79 @@ const PRODUTOS = [
     ],
     kairosLink: 'https://pay.kaiross.com.br/458JMDEXF1Go',
   },
+
+  {
+    id: 'luminaria-mata-mosquito-uv',
+    nome: 'Luminária Mata Mosquito Elétrica com Luz Ultravioleta',
+    categoria: 'Iluminação',
+    preco: 28.99,
+    precoAnterior: null,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/mata-mosquito-1.jpg',
+      'images/produtos/mata-mosquito-2.jpg',
+      'images/produtos/mata-mosquito-3.jpg',
+      'images/produtos/mata-mosquito-4.jpg',
+      'images/produtos/mata-mosquito-5.jpg',
+      'images/produtos/mata-mosquito-6.jpg',
+      'images/produtos/mata-mosquito-7.jpg',
+      'images/produtos/mata-mosquito-8.jpg',
+    ],
+    curto: 'Armadilha elétrica com luz UV que atrai, captura e elimina mosquitos — e ainda ilumina o ambiente.',
+    descricao:
+      'A Luminária Mata Mosquito Elétrica com Luz Ultravioleta é um abajur inseticida com design moderno em ABS e PC, disponível nas cores cinza e verde. A luz LED ultravioleta atrai mosquitos e insetos voadores, que ficam presos na estrutura interna e são eliminados de forma eficaz — sem produtos químicos, sem gases tóxicos e sem cheiro. Além de proteger o ambiente, funciona como luminária decorativa, com iluminação suave e agradável. Basta conectar na tomada via cabo USB (5V / 5W) e ligar.',
+    beneficios: [
+      'Elimina mosquitos e insetos voadores com luz ultravioleta — sem produtos químicos',
+      'Sem substâncias tóxicas ou gases prejudiciais à saúde — seguro para ambientes fechados',
+      'Funciona também como luminária decorativa com luz suave e agradável',
+      'Alimentação via USB com 5V e 5W de potência — fácil de usar',
+      'Design moderno em ABS e PC, nas cores cinza e verde',
+      'Dimensões compactas de 16,2 x 9 x 6,2 cm — cabe em qualquer divisão',
+      'Ideal para quartos, salas e ambientes de até 50 m²',
+    ],
+    comoFunciona: [
+      { titulo: 'Conecta o cabo USB', texto: 'Liga o cabo USB a um carregador, computador ou power bank.' },
+      { titulo: 'Liga a luminária', texto: 'Acende a luz ultravioleta que atrai mosquitos e insetos voadores.' },
+      { titulo: 'Mantém o ambiente livre', texto: 'Os insetos ficam presos na estrutura interna e são eliminados, enquanto a luz também ilumina o espaço.' },
+    ],
+    porqueEscolher: [
+      'Proteção eficaz contra mosquitos sem cheiro nem produtos químicos',
+      'Dupla função: repelente e luminária decorativa',
+      'Seguro para uso em ambientes fechados, incluindo quartos',
+      'Simples de usar — basta ligar na porta USB',
+      'Design compacto e moderno que combina com a decoração',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'O aparelho usa produtos químicos?',
+        r: 'Não. A luminária elimina os mosquitos através da luz ultravioleta e da estrutura interna, sem produtos químicos, gases tóxicos ou cheiro.',
+      },
+      {
+        p: 'É seguro para usar em ambientes fechados?',
+        r: 'Sim. Não emite substâncias tóxicas nem gases prejudiciais à saúde, sendo seguro para quartos, salas e outros ambientes internos.',
+      },
+      {
+        p: 'Preciso de tomada especial?',
+        r: 'Não. O produto funciona com alimentação via USB (5V / 5W), podendo ser conectado a um carregador, computador ou power bank.',
+      },
+      {
+        p: 'Para que área ele é indicado?',
+        r: 'É indicado para ambientes de até 50 m², como quartos, salas e escritórios.',
+      },
+      {
+        p: 'Quais são as dimensões?',
+        r: 'O produto mede 16,2 x 9 x 6,2 cm, um tamanho compacto que se adapta a qualquer ambiente.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'COLOCAR_LINK_DA_KAIROS_AQUI',
+  },
 ];
 
 /* ============================================================
