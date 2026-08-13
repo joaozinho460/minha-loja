@@ -56,10 +56,10 @@ const PRODUTOS = [
     destaque: true,
     bestseller: true,
     imagens: [
-      'images/produtos/luminaria-solar-jardim.jpg',
-      'images/produtos/luminaria-solar-jardim-2.jpg',
-      'images/produtos/luminaria-solar-jardim-3.jpg',
-      'images/produtos/luminaria-solar-jardim-4.jpg',
+      'images/produtos/lumiraria solar 1.jpg',
+      'images/produtos/lumiraria solar 2.jpg',
+      'images/produtos/lumiraria solar 3.jpg',
+      'images/produtos/lumiraria solar 4.jpg',
     ],
     curto: 'Ilumine o seu jardim, varanda ou entrada com uma luminária solar elegante, sem fios e sem gastar energia.',
     descricao:
