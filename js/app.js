@@ -3,27 +3,68 @@
     Pesquisa + limite visual de 34 produtos
     ============================================================ */
 
-const MAX_PRODUTOS = 34;
+const MAX_PRODUTOS = 40;
 
 function renderHomeGrids() {
   const dest = document.getElementById('gridDestaques');
-  const best = document.getElementById('gridBestsellers');
+  const grid = document.getElementById('gridProdutos');
 
   const destaque = produtosDestaque().slice(0, MAX_PRODUTOS);
-  const bestseller = produtosBestsellers().slice(0, MAX_PRODUTOS);
 
   if (dest) {
     dest.innerHTML = destaque.map(renderProdCard).join('') ||
       '<p style="grid-column:1/-1;color:var(--ink-soft)">Em breve.</p>';
   }
 
-  if (best) {
-    best.innerHTML = bestseller.map(renderProdCard).join('') ||
-      '<p style="grid-column:1/-1;color:var(--ink-soft)">Em breve.</p>';
-  }
-
+  initCategoryFilter(grid);
   initProductSearch();
   initReveal();
+}
+
+function initCategoryFilter(grid) {
+  const wrap = document.getElementById('catFilter');
+  if (!wrap || !grid) return;
+
+  const categorias = ['Todos'];
+  PRODUTOS.forEach(function (p) {
+    if (categorias.indexOf(p.categoria) === -1) categorias.push(p.categoria);
+  });
+
+  let ativa = 'Todos';
+
+  function render() {
+    const lista =
+      ativa === 'Todos'
+        ? PRODUTOS
+        : PRODUTOS.filter(function (p) { return p.categoria === ativa; });
+
+    grid.innerHTML = lista.slice(0, MAX_PRODUTOS).map(renderProdCard).join('') ||
+      '<p style="grid-column:1/-1;color:var(--ink-soft)">Sem produtos nesta categoria.</p>';
+    initReveal();
+  }
+
+  wrap.innerHTML = categorias
+    .map(function (c) {
+      return (
+        '<button type="button" class="cat-pill' + (c === ativa ? ' active' : '') + '" data-cat="' + c + '">' +
+        c +
+        '</button>'
+      );
+    })
+    .join('');
+
+  wrap.querySelectorAll('.cat-pill').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      ativa = btn.getAttribute('data-cat');
+      wrap.querySelectorAll('.cat-pill').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      render();
+    });
+  });
+
+  render();
 }
 
 function initProductSearch() {

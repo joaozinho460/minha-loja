@@ -56,7 +56,7 @@
 
         <a href="index.html#produtos">Produtos</a>
 
-        <a href="index.html#ofertas">Ofertas</a>
+        <a href="index.html#ofertas">Todos os produtos</a>
 
         <a href="index.html#faq">FAQ</a>
 
@@ -97,7 +97,7 @@
 
     <a href="index.html#produtos">Produtos</a>
 
-    <a href="index.html#ofertas">Ofertas</a>
+    <a href="index.html#ofertas">Todos os produtos</a>
 
     <a href="index.html#faq">FAQ</a>
 
@@ -726,7 +726,7 @@
             <input id="productSearch" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos" />
             <span id="searchCount" class="search-count" aria-live="polite"></span>
           </form>
-          <p class="search-help">Pesquisa por nome, categoria ou característica. Até 34 produtos por pesquisa.</p>
+          <p class="search-help">Pesquisa por nome, categoria ou característica. Até 40 produtos por pesquisa.</p>
           <div id="searchResults" class="prod-grid cols-4 search-results" aria-live="polite"></div>
           <p id="searchEmpty" class="search-empty" hidden>Nenhum produto encontrado. Tenta outro nome ou categoria.</p>
         </div>
@@ -892,7 +892,7 @@
     </section>
 
 
-    <!-- ================= MAIS VENDIDOS ================= -->
+    <!-- ================= PRODUTOS ================= -->
 
     <section
       class="section"
@@ -904,24 +904,32 @@
         <div class="sec-head">
 
           <span class="eyebrow">
-            Os favoritos
+            O catálogo completo
           </span>
 
           <h2>
-            Os mais vendidos
+            Produtos
           </h2>
 
           <p>
-            Os produtos que os nossos clientes mais escolhem para a sua casa.
+            Escolhe a categoria que queres e encontra o produto perfeito para a tua casa.
           </p>
 
         </div>
 
 
         <div
+          class="cat-filter"
+          id="catFilter"
+          role="group"
+          aria-label="Filtrar produtos por categoria"
+        ></div>
+
+
+        <div
           class="prod-grid"
-          id="gridBestsellers"
-          data-filtro="bestseller"
+          id="gridProdutos"
+          data-filtro="todos"
         ></div>
 
       </div>
@@ -1275,7 +1283,7 @@
 
             <li>
               <a href="index.html#ofertas">
-                Ofertas
+                Todos os produtos
               </a>
             </li>
 
