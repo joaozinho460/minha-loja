@@ -1,359 +1,227 @@
 /* ============================================================
-   MAXIMIANO · Casa & Lifestyle
-   ------------------------------------------------------------
-   DADOS DA LOJA E DOS PRODUTOS
-   ------------------------------------------------------------
-   Loja configurada para o Brasil.
-   ============================================================ */
+    MAXIMIANO · Casa & Lifestyle — Página de Detalhes do Produto
+    ============================================================ */
 
-const LOJA = {
-  nome: 'MAXIMIANO',
-  tagline: 'Casa & Lifestyle',
-  logo: 'MAXIMIANO',
+document.addEventListener('DOMContentLoaded', function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const produtoId = urlParams.get('id');
 
-  whatsapp: '',
-  email: 'ola@maximiano.com.br',
-
-  instagram: '#',
-  facebook: '#',
-  tiktok: '#',
-
-  moeda: 'BRL',
-  simboloMoeda: 'R$',
-
-  footerDescricao:
-    'Produtos selecionados para tornar a tua casa mais confortável, bonita e funcional. Compra simples, segura e acompanhada.',
-};
-
-
-/* ============================================================
-   PRODUTOS
-   ============================================================ */
-
-const PRODUTOS = [
-
-  /* ==========================================================
-     PRODUTO 01 · LUMINÁRIA SOLAR
-     ========================================================== */
-
-  {
-    id: 'luminaria-solar-jardim',
-
-    nome: 'Luminária Solar de Parede para Jardim',
-
-    categoria: 'Iluminação',
-
-    preco: 104.00,
-
-    precoAnterior: 119.60,
-
-    desconto: null,
-
-    destaque: true,
-
-    bestseller: true,
-
-    imagens: [
-      'images/produtos/luminaria-solar-jardim.jpg',
-      'images/produtos/luminaria-solar-jardim-2.jpg',
-      'images/produtos/luminaria-solar-jardim-3.jpg'
-    ],
-
-    curto:
-      'Ilumine o seu jardim, varanda ou entrada com uma luminária solar elegante, sem fios e sem gastar energia.',
-
-    descricao:
-      'A Luminária Solar de Parede para Jardim é uma solução prática e elegante para iluminar áreas externas da sua casa. Com iluminação direcionada para cima e para baixo, cria um efeito moderno na parede e ajuda a deixar jardins, varandas, entradas e corredores externos mais bonitos e iluminados.',
-
-    beneficios: [
-      'Funcionamento alimentado por energia solar',
-      'Não precisa de fios ou ligação elétrica',
-      'Iluminação para cima e para baixo',
-      'Ideal para jardins, varandas, entradas e áreas externas',
-      'Design moderno que combina com diferentes ambientes',
-      'Instalação simples na parede'
-    ],
-
-    comoFunciona: [
-
-      {
-        titulo: 'Instale na parede',
-
-        texto:
-          'Escolha um local externo adequado e fixe a luminária na parede.'
-      },
-
-      {
-        titulo: 'Deixe carregar durante o dia',
-
-        texto:
-          'O painel solar aproveita a luz do sol para carregar a bateria interna.'
-      },
-
-      {
-        titulo: 'Aproveite à noite',
-
-        texto:
-          'Após o carregamento, a luminária utiliza a energia armazenada para iluminar o ambiente.'
-      }
-
-    ],
-
-    porqueEscolher: [
-
-      'Ajuda a iluminar áreas externas sem precisar de uma tomada',
-
-      'Visual moderno com iluminação direcionada para cima e para baixo',
-
-      'Pode ser utilizada em diferentes espaços externos',
-
-      'Uma forma simples de valorizar a aparência da sua casa'
-
-    ],
-
-    disponibilidade: {
-      texto: 'Em estoque · pronto para envio',
-      nivel: 'stock'
-    },
-
-    faq: [
-
-      {
-        p: 'A luminária precisa ser ligada na tomada?',
-
-        r:
-          'Não. O produto utiliza energia solar e possui bateria interna.'
-      },
-
-      {
-        p: 'Onde posso instalar?',
-
-        r:
-          'Pode ser utilizada em áreas externas como jardins, varandas, entradas, muros e corredores.'
-      },
-
-      {
-        p: 'Ela possui iluminação para cima e para baixo?',
-
-        r:
-          'Sim. O modelo foi desenvolvido para criar iluminação direcionada para cima e para baixo.'
-      },
-
-      {
-        p: 'Quanto custa?',
-
-        r:
-          'O preço atual é de R$ 104,00. O preço anterior informado no checkout é de R$ 119,60.'
-      },
-
-      {
-        p: 'Qual é o prazo de entrega?',
-
-        r:
-          'O checkout informa prazo de entrega de 7 a 15 dias úteis após a confirmação do pagamento.'
-      }
-
-    ],
-
-    kairosLink:
-      'https://pay.kaiross.com.br/HGRkX1GgMKmU'
+  if (!produtoId) {
+    window.location.href = 'index.html';
+    return;
   }
 
-];
-
-
-/* ============================================================
-   FUNÇÕES AUXILIARES
-   ============================================================ */
-
-
-/**
- * Formata preços para Real brasileiro.
- *
- * Exemplo:
- * 104 -> R$ 104,00
- */
-function formatarPreco(valor) {
-
-  if (valor === null || valor === undefined || valor === '') {
-    return 'R$ 0,00';
-  }
-
-  if (typeof valor === 'number') {
-
-    return valor.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    });
-
-  }
-
-  return String(valor);
-}
-
-
-/**
- * Calcula automaticamente o desconto.
- */
-function calcularDesconto(produto) {
-
-  if (
-    produto.desconto !== null &&
-    produto.desconto !== undefined
-  ) {
-    return produto.desconto;
-  }
-
-  if (
-    produto.precoAnterior &&
-    produto.precoAnterior > produto.preco
-  ) {
-
-    return Math.round(
-      (1 - produto.preco / produto.precoAnterior) * 100
-    );
-
-  }
-
-  return 0;
-}
-
-
-/**
- * Procura um produto pelo ID.
- */
-function produtoPorId(id) {
-
-  if (!id) {
-    return null;
-  }
-
-  return PRODUTOS.find(function (produto) {
-
-    return produto.id === id;
-
-  }) || null;
-}
-
-
-/**
- * Produtos marcados como destaque.
- */
-function produtosDestaque() {
-
-  return PRODUTOS.filter(function (produto) {
-
-    return produto.destaque === true;
-
-  });
-
-}
-
-
-/**
- * Produtos marcados como mais vendidos.
- */
-function produtosBestsellers() {
-
-  return PRODUTOS.filter(function (produto) {
-
-    return produto.bestseller === true;
-
-  });
-
-}
-
-
-/**
- * Produtos relacionados.
- */
-function produtosRelacionados(produto, limite) {
-
+  const produto = produtoPorId(produtoId);
   if (!produto) {
-    return [];
+    window.location.href = 'index.html';
+    return;
   }
 
-  const quantidade = limite || 3;
+  initSite();
+  renderProduto(produto);
+  renderGaleria(produto);
+  renderBeneficios(produto);
+  renderComoFunciona(produto);
+  renderPorqueEscolher(produto);
+  renderFaq(document.getElementById('pdFaq'), produto.faq || []);
+  renderProdutosRelacionados(produto);
+});
 
-  const mesmos = PRODUTOS.filter(function (p) {
+function renderProduto(produto) {
+  // Breadcrumb
+  const bcCat = document.getElementById('bcCat');
+  const bcName = document.getElementById('bcName');
+  if (bcCat) bcCat.textContent = produto.categoria;
+  if (bcName) bcName.textContent = produto.nome;
 
-    return (
-      p.categoria === produto.categoria &&
-      p.id !== produto.id
-    );
+  // Categoria
+  const pdCat = document.getElementById('pdCategoria');
+  if (pdCat) pdCat.textContent = produto.categoria;
 
-  });
+  // Nome
+  const pdNome = document.getElementById('pdNome');
+  if (pdNome) pdNome.textContent = produto.nome;
 
-  const restantes = PRODUTOS.filter(function (p) {
+  // Curto
+  const pdCurto = document.getElementById('pdCurto');
+  if (pdCurto) pdCurto.textContent = produto.curto;
 
-    return (
-      p.categoria !== produto.categoria &&
-      p.id !== produto.id
-    );
+  // Preço
+  const pdPreco = document.getElementById('pdPreco');
+  if (pdPreco) {
+    const desc = calcularDesconto(produto);
+    const moeda = LOJA.simboloMoeda || 'R$';
+    let html = '<span class="price">' + moeda + ' ' + produto.preco.toFixed(2).replace('.', ',') + '</span>';
+    if (produto.precoAnterior && produto.precoAnterior > produto.preco) {
+      html += ' <span class="old">' + moeda + ' ' + produto.precoAnterior.toFixed(2).replace('.', ',') + '</span>';
+    }
+    if (desc > 0) {
+      html += ' <span class="badge badge-disc">-' + desc + '%</span>';
+    }
+    pdPreco.innerHTML = html;
+  }
 
-  });
+  // Stock
+  const pdStock = document.getElementById('pdStock');
+  if (pdStock) pdStock.innerHTML = stockHTML(produto);
 
-  return [...mesmos, ...restantes].slice(0, quantidade);
+  // Descrição
+  const pdDesc = document.getElementById('pdDesc');
+  if (pdDesc) pdDesc.textContent = produto.descricao;
 
+  // Botão de compra
+  const pdBuyBtn = document.getElementById('pdBuyBtn');
+  const pdBuyBtn2 = document.getElementById('pdBuyBtn2');
+  const mbbBtn = document.getElementById('mbbBtn');
+  
+  if (pdBuyBtn) pdBuyBtn.href = produto.kairosLink;
+  if (pdBuyBtn2) pdBuyBtn2.href = produto.kairosLink;
+  if (mbbBtn) mbbBtn.href = produto.kairosLink;
+
+  // Mobile buy bar
+  const mbbPreco = document.getElementById('mbbPreco');
+  const mbbPrecoAntigo = document.getElementById('mbbPrecoAntigo');
+  const moeda = LOJA.simboloMoeda || 'R$';
+  
+  if (mbbPreco) mbbPreco.textContent = moeda + ' ' + produto.preco.toFixed(2).replace('.', ',');
+  if (mbbPrecoAntigo && produto.precoAnterior) {
+    mbbPrecoAntigo.textContent = moeda + ' ' + produto.precoAnterior.toFixed(2).replace('.', ',');
+  }
+
+  // CTA final
+  const ctaFinalTexto = document.getElementById('ctaFinalTexto');
+  if (ctaFinalTexto) ctaFinalTexto.textContent = 'Compra ' + produto.nome + ' com segurança e aproveita a entrega acompanhada.';
+
+  // Meta tags
+  document.title = produto.nome + ' · MAXIMIANO · Casa & Lifestyle';
 }
 
+function renderGaleria(produto) {
+  const gMain = document.getElementById('gMain');
+  const gThumbs = document.getElementById('gThumbs');
+  const gBadges = document.getElementById('gBadges');
 
-/**
- * Todas as categorias disponíveis.
- */
-function categoriasProdutos() {
+  if (!produto.imagens || !produto.imagens.length) return;
 
-  return [
-    ...new Set(
-      PRODUTOS.map(function (produto) {
+  // Imagem principal
+  if (gMain) {
+    gMain.src = produto.imagens[0];
+    gMain.alt = produto.nome;
+  }
 
-        return produto.categoria;
-
+  // Miniaturas
+  if (gThumbs) {
+    gThumbs.innerHTML = produto.imagens
+      .map(function (img, i) {
+        return (
+          '<button class="gallery-thumb' + (i === 0 ? ' active' : '') + '" data-src="' + img + '" aria-label="Ver imagem ' + (i + 1) + '">' +
+          '<img src="' + img + '" alt="' + produto.nome + ' - imagem ' + (i + 1) + '" />' +
+          '</button>'
+        );
       })
-    )
-  ];
+      .join('');
 
+    gThumbs.querySelectorAll('.gallery-thumb').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const src = this.getAttribute('data-src');
+        if (gMain) gMain.src = src;
+        gThumbs.querySelectorAll('.gallery-thumb').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  }
+
+  // Badges
+  if (gBadges) {
+    const desc = calcularDesconto(produto);
+    let badgesHtml = '';
+    if (desc > 0) {
+      badgesHtml += '<span class="badge badge-disc">-' + desc + '%</span>';
+    }
+    if (produto.destaque) {
+      badgesHtml += '<span class="badge badge-feature">Destaque</span>';
+    }
+    gBadges.innerHTML = badgesHtml;
+  }
 }
 
+function renderBeneficios(produto) {
+  const pdBeneficios = document.getElementById('pdBeneficios');
+  if (!pdBeneficios || !produto.beneficios || !produto.beneficios.length) return;
 
-/**
- * Pesquisa produtos pelo nome, categoria
- * ou descrição.
- */
-function pesquisarProdutos(termo) {
+  pdBeneficios.innerHTML = produto.beneficios
+    .map(function (beneficio) {
+      return (
+        '<li>' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M20 6L9 17l-5-5" />' +
+        '</svg>' +
+        '<span>' + beneficio + '</span>' +
+        '</li>'
+      );
+    })
+    .join('');
+}
 
-  if (!termo) {
-    return PRODUTOS;
+function renderComoFunciona(produto) {
+  const pdComoFunciona = document.getElementById('pdComoFunciona');
+  if (!pdComoFunciona || !produto.comoFunciona || !produto.comoFunciona.length) {
+    const sec = document.getElementById('comoFuncionaSec');
+    if (sec) sec.style.display = 'none';
+    return;
   }
 
-  const pesquisa = termo
-    .toLowerCase()
-    .trim();
+  pdComoFunciona.innerHTML = produto.comoFunciona
+    .map(function (step, i) {
+      return (
+        '<div class="how-card reveal d' + (i % 3) + '">' +
+        '<div class="how-num">' + (i + 1) + '</div>' +
+        '<h3>' + step.titulo + '</h3>' +
+        '<p>' + step.texto + '</p>' +
+        '</div>'
+      );
+    })
+    .join('');
 
-  if (!pesquisa) {
-    return PRODUTOS;
+  initReveal();
+}
+
+function renderPorqueEscolher(produto) {
+  const pdPorque = document.getElementById('pdPorque');
+  if (!pdPorque || !produto.porqueEscolher || !produto.porqueEscolher.length) {
+    const sec = document.getElementById('porqueSec');
+    if (sec) sec.style.display = 'none';
+    return;
   }
 
-  return PRODUTOS.filter(function (produto) {
+  pdPorque.innerHTML = produto.porqueEscolher
+    .map(function (razao, i) {
+      return (
+        '<div class="why-card reveal d' + (i % 3) + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M20 6L9 17l-5-5" />' +
+        '</svg>' +
+        '<p>' + razao + '</p>' +
+        '</div>'
+      );
+    })
+    .join('');
 
-    const texto = [
+  initReveal();
+}
 
-      produto.nome,
+function renderProdutosRelacionados(produto) {
+  const pdRelacionados = document.getElementById('pdRelacionados');
+  if (!pdRelacionados) return;
 
-      produto.categoria,
+  const relacionados = produtosRelacionados(produto, 4);
+  if (!relacionados.length) {
+    pdRelacionados.innerHTML = '<p style="grid-column:1/-1;color:var(--ink-soft)">Sem produtos relacionados.</p>';
+    return;
+  }
 
-      produto.curto,
-
-      produto.descricao,
-
-      ...(produto.beneficios || [])
-
-    ]
-      .join(' ')
-      .toLowerCase();
-
-    return texto.includes(pesquisa);
-
-  });
-
+  pdRelacionados.innerHTML = relacionados.map(renderProdCard).join('');
+  initReveal();
 }
