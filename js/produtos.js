@@ -2114,9 +2114,10 @@ const PRODUTOS = [
     destaque: true,
     bestseller: false,
     imagens: [
-      'images/produtos/luminaria-mesa-branca1.jpg',
-      'images/produtos/luminaria-mesa-branca2.jpg',
+      'images/produtos/luminaria-mesa-branca4.jpg',
       'images/produtos/luminaria-mesa-branca3.jpg',
+      'images/produtos/luminaria-mesa-branca2.jpg',
+      'images/produtos/luminaria-mesa-branca1.jpg',
     ],
     curto: 'Luminária de mesa com luz LED de 6W, elegante e compacta para qualquer ambiente.',
     descricao:
