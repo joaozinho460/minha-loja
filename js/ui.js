@@ -301,6 +301,7 @@ function showToast(msg) {
     toast.style.cssText =
       'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0d1424;color:#fff;' +
       'padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:999;' +
+      'pointer-events:none;' +
       'box-shadow:0 16px 40px rgba(13,20,36,.32);max-width:90vw;text-align:center;';
     document.body.appendChild(toast);
   }
