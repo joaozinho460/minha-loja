@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MAXIMIANO · Casa & Lifestyle — Produtos selecionados para a tua casa</title>
+  <title>NEXORA | Produtos e Ofertas Online</title>
 
   <meta
     name="description"
-    content="A MAXIMIANO seleciona produtos para tornar a tua casa mais confortável, bonita e funcional. Compra simples, segura e acompanhada."
+    content="A NEXORA seleciona produtos práticos, bonitos e funcionais para o seu dia a dia. Compras simples, seguras e acompanhadas — com ofertas que valem a pena."
   />
 
-  <meta name="theme-color" content="#f6f2eb" />
+  <meta name="theme-color" content="#10133a" />
 
-  <meta property="og:title" content="MAXIMIANO · Casa & Lifestyle" />
+  <meta property="og:title" content="NEXORA | Produtos e Ofertas Online" />
   <meta
     property="og:description"
-    content="Produtos selecionados para a tua casa. Compra simples e segura."
+    content="Produtos selecionados com compras simples, seguras e acompanhadas."
   />
   <meta property="og:type" content="website" />
 
@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -33,7 +33,7 @@
   <link
     rel="icon"
     type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f1d1a'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' fill='%23f6f2eb' text-anchor='middle' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='18' fill='%23fff' text-anchor='middle' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E"
   />
 </head>
 
@@ -43,46 +43,52 @@
 
   <header class="header" id="header">
 
-    <div class="container header-inner">
+    <div class="container">
 
-      <a href="index.html" class="logo" aria-label="MAXIMIANO — Início">
-        MAXIMIANO<span class="dot">.</span>
-        <small>Casa &amp; Lifestyle</small>
-      </a>
+      <div class="header-top">
 
-      <nav class="nav" aria-label="Navegação principal">
-
-        <a href="index.html">Início</a>
-
-        <a href="index.html#produtos">Produtos</a>
-
-        <a href="index.html#ofertas">Todos os produtos</a>
-
-        <a href="index.html#faq">FAQ</a>
-
-        <a href="index.html#contacto">Contacto</a>
-
-      </nav>
-
-      <div class="header-actions">
-
-        <a href="#produtos" class="btn btn-accent btn-sm header-cta">
-          Ver produtos
+        <a href="index.html" class="logo" aria-label="NEXORA — Início">
+          NEXORA<span class="dot">.</span>
+          <small>Produtos &amp; Ofertas</small>
         </a>
 
-        <button
-          class="burger"
-          id="burger"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          type="button"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <form class="header-search" id="headerSearchForm" role="search" autocomplete="off">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+          <input id="headerSearchInput" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos" />
+          <button type="submit" class="btn btn-accent btn-sm header-search-btn" aria-label="Pesquisar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+            <span>Pesquisar</span>
+          </button>
+        </form>
+
+        <div class="header-actions">
+
+          <button type="button" class="cart-btn" id="cartOpen" aria-label="Abrir carrinho">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+
+          <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
 
       </div>
+
+      <nav class="header-cats" id="headerCats" aria-label="Categorias"></nav>
 
     </div>
 
@@ -93,21 +99,68 @@
 
   <div class="mobile-menu" id="mobileMenu">
 
-    <a href="index.html">Início</a>
+    <div class="mobile-menu-head">
+      <a href="index.html" class="logo" aria-label="NEXORA — Início">
+        NEXORA<span class="dot">.</span>
+      </a>
+      <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
 
-    <a href="index.html#produtos">Produtos</a>
+    <a href="index.html" class="menu-link">Início</a>
+    <a href="index.html#produtos" class="menu-link">Produtos em destaque</a>
+    <a href="index.html#ofertas-destaque" class="menu-link">Ofertas NEXORA</a>
+    <a href="index.html#ofertas" class="menu-link">Todos os produtos</a>
+    <a href="index.html#faq" class="menu-link">FAQ</a>
+    <a href="index.html#contacto" class="menu-link">Contacto</a>
 
-    <a href="index.html#ofertas">Todos os produtos</a>
+    <span class="mobile-menu-label">Categorias</span>
+    <div class="cat-list" id="mobileCats"></div>
 
-    <a href="index.html#faq">FAQ</a>
-
-    <a href="index.html#contacto">Contacto</a>
-
-    <a href="#produtos" class="btn btn-accent">
-      Ver produtos
-    </a>
+    <a href="index.html#ofertas" class="btn btn-accent">Ver produtos</a>
 
   </div>
+
+
+  <!-- ================= CART DRAWER ================= -->
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras">
+
+    <div class="cart-head">
+      <div>
+        <h2>O seu carrinho</h2>
+        <span class="cart-head-count" id="cartCountText"></span>
+      </div>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+      </svg>
+      <p>O seu carrinho está vazio.</p>
+      <button type="button" class="btn btn-ghost" id="cartContinue2">Continuar comprando</button>
+    </div>
+
+    <div class="cart-foot" id="cartFooter" hidden>
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal"></strong>
+      </div>
+      <p class="cart-note">Cada artigo é pago com segurança na sua página de pagamento.</p>
+      <button type="button" class="btn btn-accent" id="cartContinue">Continuar comprando</button>
+    </div>
+
+  </aside>
 
 
   <main>
@@ -122,104 +175,56 @@
 
           <span class="hero-badge">
             <span class="pulse"></span>
-            Entrega acompanhada · Portugal e Europa
+            Ofertas selecionadas · Compra segura e acompanhada
           </span>
 
-
           <h1>
-            A tua casa merece
-            <em>qualidade</em>, não
-            <em>a desordem</em>.
+            O melhor para a sua casa,
+            <em>pelo melhor preço</em>.
           </h1>
 
-
           <p class="hero-sub">
-            Produtos selecionados para tornar cada divisão mais confortável,
-            bonita e funcional. Menos pesquisa, mais certeza.
+            A NEXORA seleciona produtos práticos, bonitos e funcionais.
+            Menos pesquisa, mais certeza — da escolha à entrega.
           </p>
-
 
           <div class="hero-cta">
 
-            <a href="#produtos" class="btn btn-accent btn-lg">
-
-              Comprar agora
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+            <a href="#ofertas-destaque" class="btn btn-accent btn-lg">
+              Ver ofertas
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-
             </a>
 
-
-            <a href="#como-funciona" class="btn btn-ghost btn-lg">
-              Como funciona
+            <a href="#ofertas" class="btn btn-ghost btn-lg">
+              Explorar produtos
             </a>
 
           </div>
 
-
           <ul class="hero-trust">
 
             <li>
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-
               Pagamento seguro
-
             </li>
 
-
             <li>
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-
               Compra protegida
-
             </li>
 
-
             <li>
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
-
               Encomenda acompanhável
-
             </li>
 
           </ul>
@@ -233,268 +238,77 @@
 
           <div class="hero-card">
 
-            <!--
-              IMAGEM NOVA DO HERO
-              Não depende de nenhum ficheiro externo.
-              Não contém AURA.
-            -->
-
             <svg
               class="hero-product-image"
               viewBox="0 0 900 900"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
-              aria-label="Produto selecionado pela MAXIMIANO"
+              aria-label="Produtos selecionados pela NEXORA"
             >
 
               <defs>
 
-                <radialGradient
-                  id="heroBg"
-                  cx="50%"
-                  cy="42%"
-                  r="70%"
-                >
-                  <stop
-                    offset="0"
-                    stop-color="#d9a85d"
-                    stop-opacity=".45"
-                  />
+                <linearGradient id="nHeroBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b1f5c" />
+                  <stop offset="1" stop-color="#0b0e2c" />
+                </linearGradient>
 
-                  <stop
-                    offset=".48"
-                    stop-color="#8a642e"
-                    stop-opacity=".25"
-                  />
-
-                  <stop
-                    offset="1"
-                    stop-color="#171615"
-                    stop-opacity="0"
-                  />
+                <radialGradient id="nGlow" cx="50%" cy="40%" r="65%">
+                  <stop offset="0" stop-color="#7c3aed" stop-opacity=".55" />
+                  <stop offset=".55" stop-color="#4f46e5" stop-opacity=".28" />
+                  <stop offset="1" stop-color="#0b0e2c" stop-opacity="0" />
                 </radialGradient>
 
-
-                <linearGradient
-                  id="heroShade"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-
-                  <stop
-                    offset="0"
-                    stop-color="#f5efe3"
-                  />
-
-                  <stop
-                    offset="1"
-                    stop-color="#c9b99d"
-                  />
-
+                <linearGradient id="nShade" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#fdfdff" />
+                  <stop offset="1" stop-color="#c7cbf5" />
                 </linearGradient>
 
-
-                <linearGradient
-                  id="heroMetal"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-
-                  <stop
-                    offset="0"
-                    stop-color="#f0c77b"
-                  />
-
-                  <stop
-                    offset=".5"
-                    stop-color="#a87832"
-                  />
-
-                  <stop
-                    offset="1"
-                    stop-color="#5e401e"
-                  />
-
+                <linearGradient id="nMetal" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#a5b4fc" />
+                  <stop offset=".5" stop-color="#6366f1" />
+                  <stop offset="1" stop-color="#3730a3" />
                 </linearGradient>
 
-
-                <filter id="heroGlow">
-
-                  <feGaussianBlur
-                    stdDeviation="28"
-                  />
-
+                <filter id="nBlur">
+                  <feGaussianBlur stdDeviation="30" />
                 </filter>
 
               </defs>
 
-
               <!-- Fundo -->
-
-              <rect
-                width="900"
-                height="900"
-                rx="54"
-                fill="#211f1c"
-              />
-
+              <rect width="900" height="900" rx="54" fill="url(#nHeroBg)" />
 
               <!-- Luz ambiente -->
-
-              <circle
-                cx="450"
-                cy="430"
-                r="330"
-                fill="url(#heroBg)"
-              />
-
-
-              <circle
-                cx="450"
-                cy="440"
-                r="190"
-                fill="#e8b45b"
-                opacity=".18"
-                filter="url(#heroGlow)"
-              />
-
+              <circle cx="450" cy="430" r="340" fill="url(#nGlow)" />
+              <circle cx="450" cy="440" r="200" fill="#7c3aed" opacity=".25" filter="url(#nBlur)" />
+              <circle cx="680" cy="180" r="60" fill="#ff7a1a" opacity=".18" filter="url(#nBlur)" />
 
               <!-- Sombra -->
-
-              <ellipse
-                cx="450"
-                cy="700"
-                rx="230"
-                ry="34"
-                fill="#000"
-                opacity=".28"
-              />
-
+              <ellipse cx="450" cy="705" rx="235" ry="32" fill="#000" opacity=".35" />
 
               <!-- Base metálica -->
-
-              <path
-                d="M360 635h180l-38 62H398z"
-                fill="url(#heroMetal)"
-              />
-
-
-              <path
-                d="M421 690h58v128h-58z"
-                fill="url(#heroMetal)"
-              />
-
-
-              <path
-                d="M335 815h230"
-                stroke="#c08b3d"
-                stroke-width="18"
-                stroke-linecap="round"
-              />
-
+              <path d="M358 630h184l-40 64H398z" fill="url(#nMetal)" />
+              <path d="M421 690h58v130h-58z" fill="url(#nMetal)" />
+              <path d="M333 820h234" stroke="#818cf8" stroke-width="18" stroke-linecap="round" />
 
               <!-- Cúpula -->
-
-              <path
-                d="M300 280h300l-54 190H354z"
-                fill="url(#heroShade)"
-              />
-
+              <path d="M298 280h304l-56 196H354z" fill="url(#nShade)" />
 
               <!-- Luz -->
-
-              <ellipse
-                cx="450"
-                cy="470"
-                rx="150"
-                ry="25"
-                fill="#f7d48f"
-                opacity=".75"
-              />
-
-
-              <ellipse
-                cx="450"
-                cy="475"
-                rx="120"
-                ry="18"
-                fill="#fff1c8"
-                opacity=".8"
-              />
-
-
-              <circle
-                cx="450"
-                cy="455"
-                r="28"
-                fill="#fff7dd"
-              />
-
+              <ellipse cx="450" cy="472" rx="155" ry="26" fill="#ffffff" opacity=".9" />
+              <ellipse cx="450" cy="478" rx="120" ry="18" fill="#eef2ff" opacity=".95" />
+              <circle cx="450" cy="456" r="30" fill="#ffffff" />
 
               <!-- Detalhes -->
+              <path d="M340 288c36-58 184-58 220 0" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="5" />
+              <circle cx="450" cy="456" r="205" fill="none" stroke="#a5b4fc" stroke-opacity=".35" stroke-width="3" />
+              <circle cx="450" cy="456" r="262" fill="none" stroke="#a5b4fc" stroke-opacity=".16" stroke-width="3" />
 
-              <path
-                d="M340 286c35-55 185-55 220 0"
-                fill="none"
-                stroke="#fff"
-                stroke-opacity=".45"
-                stroke-width="5"
-              />
-
-
-              <circle
-                cx="450"
-                cy="455"
-                r="205"
-                fill="none"
-                stroke="#f1d19a"
-                stroke-opacity=".28"
-                stroke-width="3"
-              />
-
-
-              <circle
-                cx="450"
-                cy="455"
-                r="260"
-                fill="none"
-                stroke="#f1d19a"
-                stroke-opacity=".14"
-                stroke-width="3"
-              />
-
-
-              <!-- MAXIMIANO -->
-
-              <text
-                x="450"
-                y="105"
-                text-anchor="middle"
-                font-family="Georgia, serif"
-                font-size="28"
-                letter-spacing="9"
-                fill="#d9c6a3"
-              >
-                MAXIMIANO
-              </text>
-
-
-              <text
-                x="450"
-                y="870"
-                text-anchor="middle"
-                font-family="Inter, Arial, sans-serif"
-                font-size="18"
-                letter-spacing="4"
-                fill="#d9c6a3"
-                opacity=".8"
-              >
-                CASA &amp; LIFESTYLE
-              </text>
+              <!-- NEXORA -->
+              <text x="450" y="104" text-anchor="middle" font-family="'Space Grotesk','Inter',sans-serif" font-size="30" letter-spacing="10" font-weight="700" fill="#ffffff">NEXORA</text>
+              <text x="450" y="130" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" letter-spacing="8" fill="#a5b4fc">LOJA ONLINE</text>
+              <text x="450" y="868" text-anchor="middle" font-family="'Inter',sans-serif" font-size="17" letter-spacing="5" fill="#a5b4fc" opacity=".85">PRODUTOS &amp; OFERTAS</text>
 
             </svg>
 
@@ -507,31 +321,18 @@
 
             <span class="ic t1">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
               </svg>
 
             </span>
 
-
             <div>
 
-              <strong>
-                Luz quente regulável
-              </strong>
+              <strong>Compra segura</strong>
 
-              <span>
-                Design premium
-              </span>
+              <span>Pagamento protegido</span>
 
             </div>
 
@@ -544,31 +345,17 @@
 
             <span class="ic t2">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4 2-7.5L2 9h7l3-7z" />
-
               </svg>
 
             </span>
 
-
             <div>
 
-              <strong>
-                Seleção MAXIMIANO
-              </strong>
+              <strong>Seleção NEXORA</strong>
 
-              <span>
-                Escolhidos a dedo
-              </span>
+              <span>Escolhidos a dedo</span>
 
             </div>
 
@@ -583,107 +370,51 @@
 
     <!-- ================= TRUST MARQUEE ================= -->
 
-    <section
-      class="trust-marquee"
-      aria-label="Garantias da loja"
-    >
+    <section class="trust-marquee" aria-label="Garantias da loja">
 
       <ul id="marqueeList">
 
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
-
           Pagamento seguro
-
         </li>
 
-
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <path d="M12 6v6l4 2" />
           </svg>
-
           Encomenda acompanhável
-
         </li>
 
-
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M20 6L9 17l-5-5" />
           </svg>
-
           Produtos testados e selecionados
-
         </li>
 
-
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
-
           Compra protegida
-
         </li>
 
-
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M17 8h1a4 4 0 110 8h-1M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z" />
           </svg>
-
           Compra simples e rápida
-
         </li>
 
-
         <li>
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4 2-7.5L2 9h7l3-7z" />
           </svg>
-
           Qualidade em cada detalhe
-
         </li>
 
       </ul>
@@ -691,51 +422,60 @@
     </section>
 
 
-    <!-- ================= PRODUTOS ================= -->
+    <!-- ================= PRODUTOS EM DESTAQUE ================= -->
 
-    <section
-      class="section"
-      id="produtos"
-    >
+    <section class="section" id="produtos">
 
       <div class="container">
 
         <div class="sec-head">
 
-          <span class="eyebrow">
-            Seleção MAXIMIANO
-          </span>
+          <span class="eyebrow">Seleção NEXORA</span>
 
-          <h2>
-            Produtos em destaque
-          </h2>
+          <h2>Produtos em destaque</h2>
 
-          <p>
-            O melhor da casa em cada categoria, escolhido pela nossa equipa.
-          </p>
+          <p>O melhor de cada categoria, escolhido pela nossa equipa.</p>
 
         </div>
 
+        <div class="prod-grid cols-4" id="gridDestaques" data-filtro="destaque"></div>
 
-        <div class="product-search-wrap">
-          <form class="product-search" role="search" autocomplete="off">
+      </div>
+
+    </section>
+
+
+    <!-- ================= OFERTAS NEXORA ================= -->
+
+    <section class="section offers-band" id="ofertas-destaque">
+
+      <div class="container">
+
+        <div class="offers-head">
+
+          <div class="sec-head">
+
+            <span class="eyebrow" style="color:#a5b4fc">Descontos reais</span>
+
+            <h2><span class="fire">🔥</span> Ofertas NEXORA</h2>
+
+            <p>
+              Os produtos mais desejados com descontos que valem a pena.
+              Aproveite antes que os preços voltem ao normal.
+            </p>
+
+          </div>
+
+          <a href="index.html?cat=ofertas#ofertas" class="btn btn-light">
+            Ver todas as ofertas
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="m20 20-4-4"></path>
+              <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-            <input id="productSearch" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos" />
-            <span id="searchCount" class="search-count" aria-live="polite"></span>
-          </form>
-          <p class="search-help">Pesquisa por nome, categoria ou característica. Até 44 produtos por pesquisa.</p>
-          <div id="searchResults" class="prod-grid cols-4 search-results" aria-live="polite"></div>
-          <p id="searchEmpty" class="search-empty" hidden>Nenhum produto encontrado. Tenta outro nome ou categoria.</p>
+          </a>
+
         </div>
 
-        <div
-          class="prod-grid cols-4"
-          id="gridDestaques"
-          data-filtro="destaque"
-        ></div>
+        <div class="deal-grid" id="gridOfertas"></div>
 
       </div>
 
@@ -744,26 +484,17 @@
 
     <!-- ================= BENEFÍCIOS ================= -->
 
-    <section
-      class="section"
-      style="background: var(--bg-alt)"
-    >
+    <section class="section" style="background: var(--bg-alt)">
 
       <div class="container">
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            Porquê a MAXIMIANO
-          </span>
+          <span class="eyebrow">Porquê a NEXORA</span>
 
-          <h2>
-            Comprar devia ser simples
-          </h2>
+          <h2>Comprar devia ser simples</h2>
 
-          <p>
-            Sem confusões, sem surpresas. Apenas produtos em que confias.
-          </p>
+          <p>Sem confusões, sem surpresas. Apenas produtos em que confia.</p>
 
         </div>
 
@@ -775,25 +506,16 @@
 
             <span class="benefit-icon">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
 
             </span>
 
-            <h3>
-              Encomenda acompanhável
-            </h3>
+            <h3>Encomenda acompanhável</h3>
 
-            <p>
-              Recebes atualizações do estado da tua encomenda desde a compra até à entrega.
-            </p>
+            <p>Recebe atualizações do estado da sua encomenda desde a compra até à entrega.</p>
 
           </div>
 
@@ -802,28 +524,16 @@
 
             <span class="benefit-icon">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-
                 <path d="M9 12l2 2 4-4" />
-
               </svg>
 
             </span>
 
-            <h3>
-              Compra protegida
-            </h3>
+            <h3>Compra protegida</h3>
 
-            <p>
-              A tua compra é processada numa plataforma segura, com as tuas informações protegidas.
-            </p>
+            <p>A sua compra é processada numa plataforma segura, com as suas informações protegidas.</p>
 
           </div>
 
@@ -832,28 +542,16 @@
 
             <span class="benefit-icon">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 4.5a1 1 0 00.9 1.5H19" />
-
                 <path d="M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" />
-
               </svg>
 
             </span>
 
-            <h3>
-              Compra simples
-            </h3>
+            <h3>Compra simples</h3>
 
-            <p>
-              Sem contas, sem complicações. Escolhes, compras e a entrega trata do resto.
-            </p>
+            <p>Sem contas, sem complicações. Escolhe, compra e a entrega trata do resto.</p>
 
           </div>
 
@@ -862,26 +560,15 @@
 
             <span class="benefit-icon">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4 2-7.5L2 9h7l3-7z" />
-
               </svg>
 
             </span>
 
-            <h3>
-              Seleção cuidada
-            </h3>
+            <h3>Seleção cuidada</h3>
 
-            <p>
-              Cada produto passa pelo nosso crivo de qualidade antes de chegar à loja.
-            </p>
+            <p>Cada produto passa pelo nosso crivo de qualidade antes de chegar à loja.</p>
 
           </div>
 
@@ -892,45 +579,123 @@
     </section>
 
 
-    <!-- ================= PRODUTOS ================= -->
+    <!-- ================= CONFIANÇA ================= -->
 
-    <section
-      class="section"
-      id="ofertas"
-    >
+    <section class="section" id="confianca">
+
+      <div class="container">
+
+        <div class="sec-head center">
+
+          <span class="eyebrow">Compre com tranquilidade</span>
+
+          <h2>Compra simples, segura e acompanhada</h2>
+
+          <p>Conheça os cuidados que tornam a sua experiência mais tranquila.</p>
+
+        </div>
+
+        <div class="trust-grid">
+
+          <div class="trust-card reveal">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+            </span>
+            <h3>Compra segura</h3>
+            <p>A compra é processada numa plataforma de pagamento segura.</p>
+          </div>
+
+          <div class="trust-card reveal d1">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="4" width="22" height="16" rx="2" />
+                <path d="M1 10h22" />
+              </svg>
+            </span>
+            <h3>Pagamento seguro</h3>
+            <p>Dados protegidos e sem contas — paga de forma simples.</p>
+          </div>
+
+          <div class="trust-card reveal d2">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 3h15v13H1z" />
+                <path d="M16 8h4l3 3v5h-7V8z" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </span>
+            <h3>Envio</h3>
+            <p>Encomenda acompanhada desde a compra até à entrega.</p>
+          </div>
+
+          <div class="trust-card reveal d3">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            <h3>Produtos selecionados</h3>
+            <p>Cada produto é escolhido e avaliado pela nossa equipa.</p>
+          </div>
+
+          <div class="trust-card reveal">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 18v-6a9 9 0 0118 0v6" />
+                <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5z" />
+              </svg>
+            </span>
+            <h3>Suporte</h3>
+            <p>Precisa de ajuda? Fale connosco por e-mail.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TODOS OS PRODUTOS ================= -->
+
+    <section class="section" id="ofertas" style="background: var(--bg-alt)">
 
       <div class="container">
 
         <div class="sec-head">
 
-          <span class="eyebrow">
-            O catálogo completo
-          </span>
+          <span class="eyebrow">O catálogo completo</span>
 
-          <h2>
-            Produtos
-          </h2>
+          <h2>Produtos</h2>
 
-          <p>
-            Escolhe a categoria que queres e encontra o produto perfeito para a tua casa.
-          </p>
+          <p>Pesquise, filtre por categoria e ordene por preço. Encontre o produto certo para si.</p>
 
         </div>
 
+        <form class="product-search" role="search" autocomplete="off">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+          <input id="productSearch" type="search" placeholder="Pesquisar por nome, categoria ou característica..." aria-label="Pesquisar produtos" />
+          <span id="searchCount" class="search-count" aria-live="polite"></span>
+        </form>
 
-        <div
-          class="cat-filter"
-          id="catFilter"
-          role="group"
-          aria-label="Filtrar produtos por categoria"
-        ></div>
+        <p id="searchEmpty" class="search-empty" hidden>Nenhum produto encontrado. Tente outro nome ou categoria.</p>
 
+        <div class="catalog-toolbar">
 
-        <div
-          class="prod-grid"
-          id="gridProdutos"
-          data-filtro="todos"
-        ></div>
+          <div class="cat-filter" id="catFilter" role="group" aria-label="Filtrar produtos por categoria"></div>
+
+          <div class="sort-bar" id="sortBar" role="group" aria-label="Ordenar produtos"></div>
+
+        </div>
+
+        <div class="prod-grid" id="gridProdutos" data-filtro="todos"></div>
 
       </div>
 
@@ -947,112 +712,54 @@
 
           <div>
 
-            <div class="promo-kicker">
-              Oferta limitada
-            </div>
+            <div class="promo-kicker">Oferta limitada</div>
 
-            <h2>
-              Luz perfeita a um
-              <em>preço imperdível</em>
-            </h2>
+            <h2>Luz perfeita a um <em>preço imperdível</em></h2>
 
             <p>
               A nossa seleção de iluminação está com desconto especial esta semana.
-              Aproveita antes que o stock volte ao preço normal.
+              Aproveite antes que o stock volte ao preço normal.
             </p>
 
-            <a
-              href="produto.html?id=luminaria-branca-mesa-6w"
-              class="btn btn-light btn-lg"
-            >
-
+            <a href="produto.html?id=luminaria-branca-mesa-6w" class="btn btn-light btn-lg">
               Ver oferta
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-
             </a>
 
           </div>
-
 
           <div class="promo-visual">
 
             <div class="promo-product-placeholder">
 
-              <svg
-                viewBox="0 0 300 300"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Produto de iluminação MAXIMIANO"
-              >
+              <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oferta de iluminação NEXORA">
 
                 <defs>
-
                   <radialGradient id="promoGlow">
-
-                    <stop
-                      offset="0"
-                      stop-color="#f2c46f"
-                      stop-opacity=".8"
-                    />
-
-                    <stop
-                      offset="1"
-                      stop-color="#f2c46f"
-                      stop-opacity="0"
-                    />
-
+                    <stop offset="0" stop-color="#7c3aed" stop-opacity=".8" />
+                    <stop offset="1" stop-color="#7c3aed" stop-opacity="0" />
                   </radialGradient>
-
                 </defs>
 
-                <circle
-                  cx="150"
-                  cy="145"
-                  r="130"
-                  fill="url(#promoGlow)"
-                />
+                <rect width="300" height="300" rx="28" fill="#10133a" />
 
-                <circle
-                  cx="150"
-                  cy="145"
-                  r="55"
-                  fill="#f8dfaa"
-                  opacity=".8"
-                />
+                <circle cx="150" cy="145" r="130" fill="url(#promoGlow)" />
 
-                <circle
-                  cx="150"
-                  cy="145"
-                  r="32"
-                  fill="#fff5d9"
-                />
+                <circle cx="150" cy="145" r="55" fill="#c7cbf5" opacity=".8" />
 
-                <text
-                  x="150"
-                  y="55"
-                  text-anchor="middle"
-                  font-family="Georgia, serif"
-                  font-size="14"
-                  letter-spacing="3"
-                  fill="#f1d19a"
-                >
-                  MAXIMIANO
-                </text>
+                <circle cx="150" cy="145" r="32" fill="#ffffff" />
+
+                <text x="150" y="52" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="15" letter-spacing="4" font-weight="700" fill="#ffffff">NEXORA</text>
+
+                <text x="150" y="268" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" letter-spacing="3" fill="#a5b4fc">ILUMINAÇÃO</text>
 
               </svg>
 
             </div>
 
-            <span class="promo-chip">
-              -29%
-            </span>
+            <span class="promo-chip">-13%</span>
 
           </div>
 
@@ -1065,27 +772,17 @@
 
     <!-- ================= COMO FUNCIONA ================= -->
 
-    <section
-      class="section"
-      id="como-funciona"
-      style="background: var(--bg-alt)"
-    >
+    <section class="section" id="como-funciona" style="background: var(--bg-alt)">
 
       <div class="container">
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            Sem complicações
-          </span>
+          <span class="eyebrow">Sem complicações</span>
 
-          <h2>
-            Como funciona
-          </h2>
+          <h2>Como funciona</h2>
 
-          <p>
-            Da escolha à entrega, o processo é simples e transparente.
-          </p>
+          <p>Da escolha à entrega, o processo é simples e transparente.</p>
 
         </div>
 
@@ -1095,51 +792,33 @@
 
           <div class="how-step reveal">
 
-            <div class="how-num">
-              01
-            </div>
+            <div class="how-num">01</div>
 
-            <h3>
-              Escolhe o produto
-            </h3>
+            <h3>Escolhe o produto</h3>
 
-            <p>
-              Explora a seleção e encontra o que faz sentido para a tua casa.
-            </p>
+            <p>Explora a seleção e encontra o que faz sentido para a sua casa.</p>
 
           </div>
 
 
           <div class="how-step reveal d1">
 
-            <div class="how-num">
-              02
-            </div>
+            <div class="how-num">02</div>
 
-            <h3>
-              Compra com segurança
-            </h3>
+            <h3>Compra com segurança</h3>
 
-            <p>
-              És redirecionado para uma página de pagamento segura e finalizas a compra.
-            </p>
+            <p>É redirecionado para uma página de pagamento segura e finaliza a compra.</p>
 
           </div>
 
 
           <div class="how-step reveal d2">
 
-            <div class="how-num">
-              03
-            </div>
+            <div class="how-num">03</div>
 
-            <h3>
-              Recebe em casa
-            </h3>
+            <h3>Recebe em casa</h3>
 
-            <p>
-              Acompanhas a encomenda até chegar à tua porta.
-            </p>
+            <p>Acompanha a encomenda até chegar à sua porta.</p>
 
           </div>
 
@@ -1152,30 +831,20 @@
 
     <!-- ================= FAQ ================= -->
 
-    <section
-      class="section"
-      id="faq"
-    >
+    <section class="section" id="faq">
 
       <div class="container">
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            Ajuda
-          </span>
+          <span class="eyebrow">Ajuda</span>
 
-          <h2>
-            Perguntas frequentes
-          </h2>
+          <h2>Perguntas frequentes</h2>
 
         </div>
 
 
-        <div
-          class="faq-wrap"
-          id="faqHome"
-        ></div>
+        <div class="faq-wrap" id="faqHome"></div>
 
       </div>
 
@@ -1184,49 +853,23 @@
 
     <!-- ================= CTA FINAL ================= -->
 
-    <section
-      class="section"
-      style="padding-top: 0"
-    >
+    <section class="section" style="padding-top: 0">
 
       <div class="container">
 
         <div class="final-cta reveal">
 
-          <span
-            class="eyebrow"
-            style="color: var(--gold)"
-          >
-            Pronto para começar?
-          </span>
+          <span class="eyebrow" style="color:#a5b4fc">Pronto para começar?</span>
 
-          <h2>
-            Encontra o produto certo para a
-            <em>tua casa</em>.
-          </h2>
+          <h2>Encontre o produto certo para a <em>sua casa</em>.</h2>
 
-          <p>
-            Compra simples, segura e acompanhada. Sem contas, sem complicações.
-          </p>
+          <p>Compra simples, segura e acompanhada. Sem contas, sem complicações.</p>
 
-          <a
-            href="#produtos"
-            class="btn btn-accent btn-lg"
-          >
-
+          <a href="#ofertas" class="btn btn-accent btn-lg">
             Ver todos os produtos
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" />
-
             </svg>
-
           </a>
 
         </div>
@@ -1240,100 +883,67 @@
 
   <!-- ================= FOOTER ================= -->
 
-  <footer
-    class="footer"
-    id="contacto"
-  >
+  <footer class="footer" id="contacto">
 
     <div class="container">
 
       <div class="footer-grid">
 
-
         <div>
 
-          <a
-            href="index.html"
-            class="logo"
-          >
-            MAXIMIANO<span class="dot">.</span>
-          </a>
+          <a href="index.html" class="logo">NEXORA<span class="dot">.</span></a>
 
-          <p
-            class="footer-desc"
-            id="footerDesc"
-          ></p>
+          <p class="footer-desc" id="footerDesc"></p>
 
         </div>
 
-
         <div class="footer-col">
 
-          <h4>
-            Loja
-          </h4>
+          <h4>Loja</h4>
 
           <ul>
 
-            <li>
-              <a href="index.html#produtos">
-                Produtos
-              </a>
-            </li>
+            <li><a href="index.html#produtos">Produtos em destaque</a></li>
 
-            <li>
-              <a href="index.html#ofertas">
-                Todos os produtos
-              </a>
-            </li>
+            <li><a href="index.html#ofertas-destaque">Ofertas NEXORA</a></li>
 
-            <li>
-              <a href="index.html#faq">
-                FAQ
-              </a>
-            </li>
+            <li><a href="index.html#ofertas">Todos os produtos</a></li>
+
+            <li><a href="index.html#faq">FAQ</a></li>
 
           </ul>
 
         </div>
 
+        <div class="footer-col">
+
+          <h4>Categorias</h4>
+
+          <ul id="footerCats"></ul>
+
+        </div>
 
         <div class="footer-col">
 
-          <h4>
-            Apoio
-          </h4>
+          <h4>Apoio</h4>
 
           <ul>
 
-            <li>
-              <a href="index.html#faq">
-                Perguntas frequentes
-              </a>
-            </li>
+            <li><a href="index.html#faq">Perguntas frequentes</a></li>
 
-            <li>
-              <a href="index.html#como-funciona">
-                Como funciona
-              </a>
-            </li>
+            <li><a href="index.html#como-funciona">Como funciona</a></li>
 
-            <li>
-              <a href="index.html#contacto">
-                Contacto
-              </a>
-            </li>
+            <li><a href="index.html#confianca">Compra segura</a></li>
+
+            <li><a href="index.html#contacto">Contacto</a></li>
 
           </ul>
 
         </div>
 
-
         <div class="footer-col">
 
-          <h4>
-            Contacto
-          </h4>
+          <h4>Contacto</h4>
 
           <ul id="footerContact"></ul>
 
@@ -1341,33 +951,17 @@
 
       </div>
 
-
       <div class="footer-bottom">
 
-        <span>
-
-          &copy;
-
-          <span id="ano"></span>
-
-          MAXIMIANO · Casa &amp; Lifestyle
-
-        </span>
-
+        <span>&copy; <span id="ano"></span> NEXORA · Produtos &amp; Ofertas Online</span>
 
         <div class="footer-pay">
 
-          <span>
-            Pagamento seguro
-          </span>
+          <span>Pagamento seguro</span>
 
-          <span>
-            Compra protegida
-          </span>
+          <span>Compra protegida</span>
 
-          <span>
-            Encomenda acompanhável
-          </span>
+          <span>Encomenda acompanhável</span>
 
         </div>
 
@@ -1380,22 +974,10 @@
 
   <!-- ================= BACK TO TOP ================= -->
 
-  <button
-    class="back-top"
-    id="backTop"
-    aria-label="Voltar ao topo"
-    type="button"
-  >
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo" type="button">
 
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M12 19V5M5 12l7-7 7 7" />
-
     </svg>
 
   </button>
@@ -1404,71 +986,9 @@
   <!-- ================= SCRIPTS ================= -->
 
   <script src="js/produtos.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/app.js"></script>
-
-
-  <!-- ================= HERO IMAGE CSS ================= -->
-
-  <style>
-
-    .hero-product-image {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      display: block;
-      object-fit: cover;
-    }
-
-    .hero-card {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero-card .hero-product-image {
-      transition:
-        transform 0.7s cubic-bezier(.2,.7,.2,1);
-    }
-
-    .hero-card:hover .hero-product-image {
-      transform: scale(1.025);
-    }
-
-    .promo-product-placeholder {
-      width: 100%;
-      height: 100%;
-      min-height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .promo-product-placeholder svg {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-    }
-
-
-    @media (max-width: 900px) {
-
-      .hero-product-image {
-        min-height: 420px;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .hero-product-image {
-        min-height: 350px;
-      }
-
-    }
-
-  </style>
 
 </body>
 </html>

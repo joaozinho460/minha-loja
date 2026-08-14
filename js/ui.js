@@ -1,9 +1,14 @@
 /* ============================================================
-    MAXIMIANO · Casa & Lifestyle — Componentes partilhados
-    (não é preciso alterar este ficheiro)
-    ============================================================ */
+   NEXORA · Produtos & Ofertas Online — Componentes partilhados
+   ============================================================ */
 
 const KAIROS_PLACEHOLDER = 'COLOCAR_LINK_DA_KAIROS_AQUI';
+
+const CART_ICON_SVG =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+  '<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>' +
+  '<path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>' +
+  '</svg>';
 
 function isKairosPlaceholder(link) {
   return !link || link === KAIROS_PLACEHOLDER;
@@ -12,8 +17,8 @@ function isKairosPlaceholder(link) {
 /* ---------- Preço ---------- */
 function precoHTML(produto) {
   const desc = calcularDesconto(produto);
-  const moeda = LOJA.simboloMoeda || '€';
-  
+  const moeda = LOJA.simboloMoeda || 'R$';
+
   let html = '<span class="price">' + moeda + ' ' + (typeof produto.preco === 'number' ? produto.preco.toFixed(2).replace('.', ',') : produto.preco) + '</span>';
   if (produto.precoAnterior && produto.precoAnterior > produto.preco) {
     html += ' <span class="old">' + moeda + ' ' + (typeof produto.precoAnterior === 'number' ? produto.precoAnterior.toFixed(2).replace('.', ',') : produto.precoAnterior) + '</span>';
@@ -44,9 +49,9 @@ function renderProdCard(produto, i) {
   return (
     '<article class="card reveal d' + delay + '">' +
     '<a class="card-media" href="' + url + '" aria-label="Ver ' + produto.nome + '">' +
-    '<img src="' + produto.imagens[0] + '" alt="' + produto.nome + '" loading="lazy" onerror="this.onerror=null;this.src=\'images/produtos/hero-maximiano.svg\';" />' +
+    '<img src="' + produto.imagens[0] + '" alt="' + produto.nome + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'images/produtos/hero-nexora.svg\';" />' +
     '<div class="card-badges">' +
-    (desc > 0 ? '<span class="badge badge-disc">-' + desc + '%</span>' : '') +
+    (desc > 0 ? '<span class="badge badge-oferta">Oferta</span><span class="badge badge-disc">-' + desc + '%</span>' : '') +
     '<span class="badge badge-cat">' + produto.categoria + '</span>' +
     '</div>' +
     '</a>' +
@@ -56,7 +61,7 @@ function renderProdCard(produto, i) {
     '<div class="card-price">' + precoHTML(produto) + '</div>' +
     stockHTML(produto) +
     '<div class="card-cta">' +
-    '<a href="' + url + '" class="btn btn-ghost btn-sm">Ver produto</a>' +
+    '<button type="button" class="btn btn-ghost btn-sm btn-add" data-add-cart="' + produto.id + '" aria-label="Adicionar ao carrinho: ' + produto.nome + '">' + CART_ICON_SVG + '<span>Adicionar</span></button>' +
     '<a href="' + produto.kairosLink + '" class="btn btn-accent btn-sm" target="_blank" rel="noopener nofollow" data-kairos>Comprar agora</a>' +
     '</div>' +
     '</div>' +
@@ -108,21 +113,27 @@ function renderFaq(container, itens) {
 function initMobileMenu() {
   const burger = document.getElementById('burger');
   const menu = document.getElementById('mobileMenu');
+  const close = document.getElementById('mobileMenuClose');
   if (!burger || !menu) return;
+
+  function fechar() {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
 
   burger.addEventListener('click', function () {
     const open = menu.classList.toggle('open');
     burger.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.classList.toggle('menu-open', open);
   });
 
+  if (close) close.addEventListener('click', fechar);
+
   menu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      menu.classList.remove('open');
-      burger.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', fechar);
   });
 }
 
@@ -202,8 +213,45 @@ function initFooter() {
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M17 7h.01"/></svg>' +
         'Instagram</a></li>';
     }
-    contato.innerHTML = html || '<li>Contacta-nos pelo e-mail da loja</li>';
+    contato.innerHTML = html || '<li>Contacte-nos pelo e-mail da loja</li>';
   }
+
+  initFooterCats();
+}
+
+/* ---------- Categorias no rodapé ---------- */
+function initFooterCats() {
+  const wrap = document.getElementById('footerCats');
+  if (!wrap || typeof PRODUTOS === 'undefined') return;
+  const cats = ['Ofertas'];
+  PRODUTOS.forEach(function (p) {
+    if (cats.indexOf(p.categoria) === -1) cats.push(p.categoria);
+  });
+  wrap.innerHTML = cats
+    .map(function (c) {
+      const param = c === 'Ofertas' ? 'cat=ofertas' : 'cat=' + encodeURIComponent(c);
+      return '<li><a href="index.html?' + param + '#ofertas">' + c + '</a></li>';
+    })
+    .join('');
+}
+
+/* ---------- Categorias no header ---------- */
+function initHeaderCats() {
+  const wrap = document.getElementById('headerCats');
+  const mobileWrap = document.getElementById('mobileCats');
+  if ((!wrap && !mobileWrap) || typeof PRODUTOS === 'undefined') return;
+  const cats = ['Ofertas'];
+  PRODUTOS.forEach(function (p) {
+    if (cats.indexOf(p.categoria) === -1) cats.push(p.categoria);
+  });
+  const html = cats
+    .map(function (c) {
+      const param = c === 'Ofertas' ? '?cat=ofertas' : '?cat=' + encodeURIComponent(c);
+      return '<a href="index.html' + param + '#ofertas" data-cat="' + c + '">' + c + '</a>';
+    })
+    .join('');
+  if (wrap) wrap.innerHTML = html;
+  if (mobileWrap) mobileWrap.innerHTML = html;
 }
 
 /* ---------- Marquees ---------- */
@@ -226,6 +274,23 @@ function initKairosLinks() {
   });
 }
 
+/* ---------- Pesquisa do header ---------- */
+function initHeaderSearch() {
+  const form = document.getElementById('headerSearchForm');
+  const input = document.getElementById('headerSearchInput');
+  if (!form || !input) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (typeof NEXORA_search === 'function') {
+      NEXORA_search(q);
+    } else {
+      window.location.href = 'index.html' + (q ? '?q=' + encodeURIComponent(q) : '');
+    }
+  });
+}
+
 /* ---------- Toast ---------- */
 let toastTimer = null;
 function showToast(msg) {
@@ -234,9 +299,9 @@ function showToast(msg) {
     toast = document.createElement('div');
     toast.id = 'toastMsg';
     toast.style.cssText =
-      'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1f1d1a;color:#fff;' +
-      'padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:99;' +
-      'box-shadow:0 16px 40px rgba(0,0,0,.3);max-width:90vw;text-align:center;';
+      'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0d1424;color:#fff;' +
+      'padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:999;' +
+      'box-shadow:0 16px 40px rgba(13,20,36,.32);max-width:90vw;text-align:center;';
     document.body.appendChild(toast);
   }
   toast.textContent = msg;
@@ -255,4 +320,7 @@ function initSite() {
   initBackTop();
   initFooter();
   initKairosLinks();
+  initHeaderCats();
+  initHeaderSearch();
+  if (typeof initCart === 'function') initCart();
 }

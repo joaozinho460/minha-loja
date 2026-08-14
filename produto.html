@@ -1,26 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Produto · MAXIMIANO · Casa &amp; Lifestyle</title>
+  <title>NEXORA | Produtos e Ofertas Online</title>
 
   <meta
     name="description"
-    content="Detalhes do produto, benefícios e compra segura na MAXIMIANO."
+    content="Detalhes do produto, benefícios e compra segura na NEXORA."
   />
 
-  <meta name="theme-color" content="#f6f2eb" />
+  <meta name="theme-color" content="#10133a" />
 
+  <meta property="og:title" content="NEXORA | Produtos e Ofertas Online" />
+  <meta
+    property="og:description"
+    content="Produtos selecionados com compras simples, seguras e acompanhadas."
+  />
   <meta property="og:type" content="product" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -29,67 +33,134 @@
   <link
     rel="icon"
     type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f1d1a'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' fill='%23f6f2eb' text-anchor='middle' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='18' fill='%23fff' text-anchor='middle' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E"
   />
 </head>
 
 <body>
 
   <!-- ================= HEADER ================= -->
+
   <header class="header" id="header">
-    <div class="container header-inner">
 
-      <a
-        href="index.html"
-        class="logo"
-        aria-label="MAXIMIANO — Início"
-      >
-        MAXIMIANO<span class="dot">.</span>
-        <small>Casa &amp; Lifestyle</small>
-      </a>
+    <div class="container">
 
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="index.html">Início</a>
-        <a href="index.html#produtos">Produtos</a>
-        <a href="index.html#ofertas">Todos os produtos</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+      <div class="header-top">
 
-      <div class="header-actions">
-        <a
-          href="index.html#produtos"
-          class="btn btn-accent btn-sm header-cta"
-        >
-          Ver produtos
+        <a href="index.html" class="logo" aria-label="NEXORA — Início">
+          NEXORA<span class="dot">.</span>
+          <small>Produtos &amp; Ofertas</small>
         </a>
 
-        <button
-          class="burger"
-          id="burger"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <form class="header-search" id="headerSearchForm" role="search" autocomplete="off">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+          <input id="headerSearchInput" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos" />
+          <button type="submit" class="btn btn-accent btn-sm header-search-btn" aria-label="Pesquisar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+            <span>Pesquisar</span>
+          </button>
+        </form>
+
+        <div class="header-actions">
+
+          <button type="button" class="cart-btn" id="cartOpen" aria-label="Abrir carrinho">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+
+          <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+
       </div>
 
+      <nav class="header-cats" id="headerCats" aria-label="Categorias"></nav>
+
     </div>
+
   </header>
 
 
+  <!-- ================= MOBILE MENU ================= -->
+
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Início</a>
-    <a href="index.html#produtos">Produtos</a>
-    <a href="index.html#ofertas">Todos os produtos</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#contacto">Contacto</a>
-    <a href="index.html#produtos" class="btn btn-accent">
-      Ver produtos
-    </a>
+
+    <div class="mobile-menu-head">
+      <a href="index.html" class="logo" aria-label="NEXORA — Início">
+        NEXORA<span class="dot">.</span>
+      </a>
+      <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <a href="index.html" class="menu-link">Início</a>
+    <a href="index.html#produtos" class="menu-link">Produtos em destaque</a>
+    <a href="index.html#ofertas-destaque" class="menu-link">Ofertas NEXORA</a>
+    <a href="index.html#ofertas" class="menu-link">Todos os produtos</a>
+    <a href="index.html#faq" class="menu-link">FAQ</a>
+    <a href="index.html#contacto" class="menu-link">Contacto</a>
+
+    <span class="mobile-menu-label">Categorias</span>
+    <div class="cat-list" id="mobileCats"></div>
+
+    <a href="index.html#ofertas" class="btn btn-accent">Ver produtos</a>
+
   </div>
+
+
+  <!-- ================= CART DRAWER ================= -->
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras">
+
+    <div class="cart-head">
+      <div>
+        <h2>O seu carrinho</h2>
+        <span class="cart-head-count" id="cartCountText"></span>
+      </div>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+      </svg>
+      <p>O seu carrinho está vazio.</p>
+      <button type="button" class="btn btn-ghost" id="cartContinue2">Continuar comprando</button>
+    </div>
+
+    <div class="cart-foot" id="cartFooter" hidden>
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal"></strong>
+      </div>
+      <p class="cart-note">Cada artigo é pago com segurança na sua página de pagamento.</p>
+      <button type="button" class="btn btn-accent" id="cartContinue">Continuar comprando</button>
+    </div>
+
+  </aside>
 
 
   <main class="product-page">
@@ -97,21 +168,13 @@
     <div class="container">
 
       <!-- Breadcrumb -->
-      <nav
-        class="breadcrumb"
-        aria-label="Localização atual"
-      >
+      <nav class="breadcrumb" aria-label="Localização atual">
         <a href="index.html">Início</a>
-
         <span class="sep">/</span>
-
         <span id="bcCat"></span>
-
         <span class="sep">/</span>
-
         <span id="bcName"></span>
       </nav>
-
 
       <!-- Detalhe principal -->
       <div class="pd-grid">
@@ -123,48 +186,28 @@
 
             <img
               id="gMain"
-              src="images/produtos/hero-maximiano.svg"
+              src="images/produtos/hero-nexora.svg"
               alt=""
             />
 
-            <div
-              class="gallery-badges"
-              id="gBadges"
-            ></div>
+            <div class="gallery-badges" id="gBadges"></div>
 
           </div>
 
-          <div
-            class="gallery-thumbs"
-            id="gThumbs"
-          ></div>
+          <div class="gallery-thumbs" id="gThumbs"></div>
 
         </div>
-
 
         <!-- 2-7. Informação + compra -->
         <div class="pd-info">
 
-          <span
-            class="pd-cat"
-            id="pdCategoria"
-          ></span>
+          <span class="pd-cat" id="pdCategoria"></span>
 
-          <h1
-            class="pd-title"
-            id="pdNome"
-          ></h1>
+          <h1 class="pd-title" id="pdNome"></h1>
 
           <p class="pd-benefit-line">
 
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M20 6L9 17l-5-5" />
             </svg>
 
@@ -172,55 +215,41 @@
 
           </p>
 
+          <div class="pd-price" id="pdPreco"></div>
 
-          <div
-            class="pd-price"
-            id="pdPreco"
-          ></div>
-
-
-          <span
-            class="pd-stock"
-            id="pdStock"
-          ></span>
-
+          <span class="pd-stock" id="pdStock"></span>
 
           <div class="buy-box">
 
-            <a
-              href="#"
-              id="pdBuyBtn"
-              class="btn btn-accent btn-lg"
-              target="_blank"
-              rel="noopener nofollow"
-              data-kairos
-            >
-              Comprar agora
+            <form class="add-cart" id="addToCartForm">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <div class="qty-wrap">
+                <button type="button" class="qty-btn qty-stepper" data-step="-1" aria-label="Diminuir quantidade">−</button>
+                <input type="number" class="qty-input" id="cartQty" value="1" min="1" max="99" aria-label="Quantidade" />
+                <button type="button" class="qty-btn qty-stepper" data-step="1" aria-label="Aumentar quantidade">+</button>
+              </div>
+
+              <button type="submit" class="btn btn-ghost btn-lg add-cart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                </svg>
+                Adicionar ao carrinho
+              </button>
+
+            </form>
+
+            <a href="#" id="pdBuyBtn" class="btn btn-accent btn-lg" target="_blank" rel="noopener nofollow" data-kairos>
+              Comprar agora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-
             </a>
-
 
             <span class="buy-secure">
 
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
 
@@ -229,49 +258,26 @@
 
             </span>
 
-
             <ul class="buy-meta">
 
               <li>
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20 6L9 17l-5-5" />
                 </svg>
-
                 Compra protegida
-
               </li>
 
-
               <li>
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 6v6l4 2" />
                 </svg>
-
                 Encomenda acompanhável
-
               </li>
 
             </ul>
 
           </div>
-
 
           <div class="pd-desc">
 
@@ -280,7 +286,6 @@
             <p id="pdDesc"></p>
 
           </div>
-
 
           <div class="benefits">
 
@@ -298,27 +303,19 @@
 
 
     <!-- 8. Como funciona -->
-    <section
-      class="pd-sec"
-      id="comoFuncionaSec"
-    >
+    <section class="pd-sec" id="comoFuncionaSec">
 
       <div class="container">
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            Simples de usar
-          </span>
+          <span class="eyebrow">Simples de usar</span>
 
           <h2>Como funciona</h2>
 
         </div>
 
-        <div
-          class="how-grid"
-          id="pdComoFunciona"
-        ></div>
+        <div class="how-grid" id="pdComoFunciona"></div>
 
       </div>
 
@@ -326,30 +323,19 @@
 
 
     <!-- 9. Por que escolher -->
-    <section
-      class="pd-sec"
-      id="porqueSec"
-      style="background: var(--bg-alt)"
-    >
+    <section class="pd-sec" id="porqueSec" style="background: var(--bg-alt)">
 
       <div class="container">
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            A nossa escolha
-          </span>
+          <span class="eyebrow">A nossa escolha</span>
 
-          <h2>
-            Porquê escolher este produto?
-          </h2>
+          <h2>Porquê escolher este produto?</h2>
 
         </div>
 
-        <div
-          class="why-grid"
-          id="pdPorque"
-        ></div>
+        <div class="why-grid" id="pdPorque"></div>
 
       </div>
 
@@ -363,20 +349,13 @@
 
         <div class="sec-head center">
 
-          <span class="eyebrow">
-            Dúvidas
-          </span>
+          <span class="eyebrow">Dúvidas</span>
 
-          <h2>
-            Perguntas frequentes
-          </h2>
+          <h2>Perguntas frequentes</h2>
 
         </div>
 
-        <div
-          class="faq-wrap"
-          id="pdFaq"
-        ></div>
+        <div class="faq-wrap" id="pdFaq"></div>
 
       </div>
 
@@ -390,55 +369,25 @@
 
         <div class="sec-head">
 
-          <span class="eyebrow">
-            Também vais gostar
-          </span>
+          <span class="eyebrow">Também vai gostar</span>
 
-          <h2>
-            Produtos relacionados
-          </h2>
+          <h2>Produtos relacionados</h2>
 
         </div>
 
+        <div class="prod-grid cols-4" id="pdRelacionados"></div>
 
-        <div
-          class="prod-grid cols-4"
-          id="pdRelacionados"
-        ></div>
+        <div class="final-cta reveal" style="margin-top: 56px">
 
-
-        <div
-          class="final-cta reveal"
-          style="margin-top: 56px"
-        >
-
-          <h2>
-            Pronto para <em>comprar agora</em>?
-          </h2>
+          <h2>Pronto para <em>comprar agora</em>?</h2>
 
           <p id="ctaFinalTexto"></p>
 
-          <a
-            href="#"
-            id="pdBuyBtn2"
-            class="btn btn-accent btn-lg"
-            target="_blank"
-            rel="noopener nofollow"
-            data-kairos
-          >
+          <a href="#" id="pdBuyBtn2" class="btn btn-accent btn-lg" target="_blank" rel="noopener nofollow" data-kairos>
             Comprar agora
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-
           </a>
 
         </div>
@@ -451,33 +400,17 @@
 
 
   <!-- Barra de compra fixa (mobile) -->
-  <div
-    class="mobile-buybar"
-    id="mobileBuyBar"
-  >
+  <div class="mobile-buybar" id="mobileBuyBar">
 
     <div class="min">
 
-      <span
-        class="price"
-        id="mbbPreco"
-      ></span>
+      <span class="price" id="mbbPreco"></span>
 
-      <span
-        class="old"
-        id="mbbPrecoAntigo"
-      ></span>
+      <span class="old" id="mbbPrecoAntigo"></span>
 
     </div>
 
-    <a
-      href="#"
-      id="mbbBtn"
-      class="btn btn-accent"
-      target="_blank"
-      rel="noopener nofollow"
-      data-kairos
-    >
+    <a href="#" id="mbbBtn" class="btn btn-accent" target="_blank" rel="noopener nofollow" data-kairos>
       Comprar agora
     </a>
 
@@ -485,10 +418,8 @@
 
 
   <!-- ================= FOOTER ================= -->
-  <footer
-    class="footer"
-    id="contacto"
-  >
+
+  <footer class="footer" id="contacto">
 
     <div class="container">
 
@@ -496,20 +427,11 @@
 
         <div>
 
-          <a
-            href="index.html"
-            class="logo"
-          >
-            MAXIMIANO<span class="dot">.</span>
-          </a>
+          <a href="index.html" class="logo">NEXORA<span class="dot">.</span></a>
 
-          <p
-            class="footer-desc"
-            id="footerDesc"
-          ></p>
+          <p class="footer-desc" id="footerDesc"></p>
 
         </div>
-
 
         <div class="footer-col">
 
@@ -517,28 +439,25 @@
 
           <ul>
 
-            <li>
-              <a href="index.html#produtos">
-                Produtos
-              </a>
-            </li>
+            <li><a href="index.html#produtos">Produtos em destaque</a></li>
 
-            <li>
-              <a href="index.html#ofertas">
-                Todos os produtos
-              </a>
-            </li>
+            <li><a href="index.html#ofertas-destaque">Ofertas NEXORA</a></li>
 
-            <li>
-              <a href="index.html#faq">
-                FAQ
-              </a>
-            </li>
+            <li><a href="index.html#ofertas">Todos os produtos</a></li>
+
+            <li><a href="index.html#faq">FAQ</a></li>
 
           </ul>
 
         </div>
 
+        <div class="footer-col">
+
+          <h4>Categorias</h4>
+
+          <ul id="footerCats"></ul>
+
+        </div>
 
         <div class="footer-col">
 
@@ -546,28 +465,17 @@
 
           <ul>
 
-            <li>
-              <a href="index.html#faq">
-                Perguntas frequentes
-              </a>
-            </li>
+            <li><a href="index.html#faq">Perguntas frequentes</a></li>
 
-            <li>
-              <a href="index.html#como-funciona">
-                Como funciona
-              </a>
-            </li>
+            <li><a href="index.html#como-funciona">Como funciona</a></li>
 
-            <li>
-              <a href="index.html#contacto">
-                Contacto
-              </a>
-            </li>
+            <li><a href="index.html#confianca">Compra segura</a></li>
+
+            <li><a href="index.html#contacto">Contacto</a></li>
 
           </ul>
 
         </div>
-
 
         <div class="footer-col">
 
@@ -579,28 +487,17 @@
 
       </div>
 
-
       <div class="footer-bottom">
 
-        <span>
-          &copy;
-          <span id="ano"></span>
-          MAXIMIANO · Casa &amp; Lifestyle
-        </span>
+        <span>&copy; <span id="ano"></span> NEXORA · Produtos &amp; Ofertas Online</span>
 
         <div class="footer-pay">
 
-          <span>
-            Pagamento seguro
-          </span>
+          <span>Pagamento seguro</span>
 
-          <span>
-            Compra protegida
-          </span>
+          <span>Compra protegida</span>
 
-          <span>
-            Encomenda acompanhável
-          </span>
+          <span>Encomenda acompanhável</span>
 
         </div>
 
@@ -611,20 +508,9 @@
   </footer>
 
 
-  <button
-    class="back-top"
-    id="backTop"
-    aria-label="Voltar ao topo"
-  >
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo" type="button">
 
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M12 19V5M5 12l7-7 7 7" />
     </svg>
 
@@ -632,9 +518,9 @@
 
 
   <script src="js/produtos.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/produto.js"></script>
 
 </body>
 </html>
-```

@@ -1,5 +1,5 @@
 /* ============================================================
-   MAXIMIANO · Casa & Lifestyle
+   NEXORA · Produtos & Ofertas Online
    ------------------------------------------------------------
    DADOS DA LOJA E DOS PRODUTOS
    ------------------------------------------------------------
@@ -32,16 +32,16 @@
    ============================================================ */
 
 const LOJA = {
-  nome: 'MAXIMIANO',
-  tagline: 'Casa & Lifestyle',
-  logo: 'MAXIMIANO',
+  nome: 'NEXORA',
+  tagline: 'Produtos & Ofertas Online',
+  logo: 'NEXORA',
   whatsapp: '',
-  email: 'ola@maximiano.pt',
+  email: 'ola@nexora.pt',
   instagram: '#',
   facebook: '#',
   tiktok: '#',
   footerDescricao:
-    'Produtos selecionados para tornar a tua casa mais confortável, bonita e funcional. Compra simples, segura e acompanhada.',
+    'A NEXORA seleciona produtos práticos, bonitos e funcionais para o seu dia a dia. Compras simples, seguras e acompanhadas — da escolha à entrega.',
   moeda: 'BRL',
   simboloMoeda: 'R$',
 };

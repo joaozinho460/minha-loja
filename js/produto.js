@@ -1,5 +1,5 @@
 /* ============================================================
-    MAXIMIANO · Casa & Lifestyle — Página de Detalhes do Produto
+    NEXORA · Produtos & Ofertas Online — Página de Detalhes do Produto
     ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   renderPorqueEscolher(produto);
   renderFaq(document.getElementById('pdFaq'), produto.faq || []);
   renderProdutosRelacionados(produto);
+  initAddToCart(produto);
 });
 
 function renderProduto(produto) {
@@ -93,7 +94,37 @@ function renderProduto(produto) {
   if (ctaFinalTexto) ctaFinalTexto.textContent = 'Compra ' + produto.nome + ' com segurança e aproveita a entrega acompanhada.';
 
   // Meta tags
-  document.title = produto.nome + ' · MAXIMIANO · Casa & Lifestyle';
+  document.title = produto.nome + ' · NEXORA | Produtos e Ofertas Online';
+}
+
+/* ---------- Adicionar ao carrinho ---------- */
+function initAddToCart(produto) {
+  const form = document.getElementById('addToCartForm');
+  if (!form) return;
+
+  const qtyInput = document.getElementById('cartQty');
+
+  const steppers = form.querySelectorAll('.qty-stepper');
+  steppers.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (!qtyInput) return;
+      const step = parseInt(btn.getAttribute('data-step'), 10) || 0;
+      let v = parseInt(qtyInput.value, 10) || 1;
+      v += step;
+      if (v < 1) v = 1;
+      if (v > 99) v = 99;
+      qtyInput.value = v;
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let qtd = qtyInput ? parseInt(qtyInput.value, 10) : 1;
+    if (!qtd || qtd < 1) qtd = 1;
+    cartAdd(produto.id, qtd);
+    showToast(produto.nome + ' adicionado ao carrinho');
+    if (typeof openCart === 'function') openCart();
+  });
 }
 
 function renderGaleria(produto) {
