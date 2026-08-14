@@ -1623,8 +1623,7 @@ h4 {
   flex: 1;
   overflow-y: auto;
   padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .cart-item {
@@ -1636,7 +1635,7 @@ h4 {
   border-radius: var(--radius);
   padding: 12px;
   margin-bottom: 12px;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .cart-item:last-child {
@@ -1785,7 +1784,7 @@ h4 {
 }
 
 .cart-empty {
-  margin: auto;
+  margin: 40px auto;
   text-align: center;
   padding: 40px 20px;
   color: var(--ink-soft);
