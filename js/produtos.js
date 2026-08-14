@@ -792,10 +792,6 @@ function produtoPorId(id) {
   return PRODUTOS.find((p) => p.id === id);
 }
 
-function produtosDestaque() {
-  return PRODUTOS.filter((p) => p.destaque);
-}
-
 function produtosBestsellers() {
   return PRODUTOS.filter((p) => p.bestseller);
 }

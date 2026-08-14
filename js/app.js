@@ -272,14 +272,6 @@ function aplicarParams() {
 }
 
 function renderHomeGrids() {
-  const dest = document.getElementById('gridDestaques');
-  const destaque = produtosDestaque().slice(0, MAX_PRODUTOS);
-
-  if (dest) {
-    dest.innerHTML =
-      destaque.map(renderProdCard).join('') || '<p class="grid-empty">Em breve.</p>';
-  }
-
   aplicarParams();
   initCategoryFilter();
   initSortBar();
