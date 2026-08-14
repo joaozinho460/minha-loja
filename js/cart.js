@@ -116,7 +116,6 @@ function renderCartDrawer() {
       '<input class="qty-input" type="number" min="1" max="99" value="' + it.qtd + '" data-qty-input="' + p.id + '" aria-label="Quantidade" />' +
       '<button type="button" class="qty-btn" data-qty="plus" data-id="' + p.id + '" aria-label="Aumentar quantidade">+</button>' +
       '</div>' +
-      '<a class="cart-item-buy btn btn-accent btn-sm" href="' + p.kairosLink + '" target="_blank" rel="noopener nofollow" data-kairos>Comprar agora</a>' +
       '</div>' +
       '<div class="cart-item-side">' +
       '<button type="button" class="cart-item-remove" data-remove-cart="' + p.id + '" aria-label="Remover do carrinho">' + CART_REMOVE_ICON + '</button>' +
