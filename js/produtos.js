@@ -19,6 +19,78 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "power-bank-10000mah-cabos",
+    "nome": "Carregador Portátil Power Bank 10.000mAh Carga Rápida com Cabos Integrados",
+    "categoria": "Tecnologia",
+    "preco": 79.9,
+    "precoAnterior": 99.9,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.6,
+    "avaliacoes": 1470,
+    "imagens": [
+      "images/produtos/power-bank-10000mah-1.jpg",
+      "images/produtos/power-bank-10000mah-2.jpg",
+      "images/produtos/power-bank-10000mah-3.jpg",
+      "images/produtos/power-bank-10000mah-4.jpg"
+    ],
+    "curto": "Power bank de 10.000mAh com cabos Micro USB e Tipo-C integrados, compatível com iOS e Android, com indicador LED de bateria.",
+    "descricao": "O Carregador Portátil Power Bank 10.000mAh recarrega todos os modelos de smartphones e dispositivos portáteis, com capacidade de armazenamento superior a 5 horas de uso. Equipado com cabos Micro USB e Tipo-C embutidos, elimina a necessidade de levar cabos extras. Inclui adaptador para iPhone, tornando-o compatível com dispositivos iOS e Android. O indicador de bateria LED mostra o nível de carga restante, e o design compacto e leve cabe no bolso, sendo ideal para viagens e uso diário.",
+    "beneficios": [
+      "Capacidade de 10.000mAh para recarregar smartphones e dispositivos portáteis",
+      "Cabos Micro USB e Tipo-C integrados — sem precisar de cabos extras",
+      "Adaptador incluído, compatível com iOS e Android",
+      "Indicador LED de bateria mostra o nível de carga restante",
+      "Design compacto e leve que cabe no bolso",
+      "Carregamento rápido, ideal para viagens e uso diário"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Liga o dispositivo",
+        "texto": "Conecta o cabo integrado Micro USB ou Tipo-C ao telemóvel ou adaptador iOS."
+      },
+      {
+        "titulo": "Carrega em qualquer lado",
+        "texto": "O power bank recarrega o dispositivo com carga rápida, sem precisar de tomada."
+      },
+      {
+        "titulo": "Monitoriza a carga",
+        "texto": "O indicador LED mostra a energia restante para planeares o teu uso."
+      }
+    ],
+    "porqueEscolher": [
+      "Cabos integrados — mais conveniência e organização",
+      "Compatível com telemóveis iOS e Android",
+      "Design compacto, leve e fácil de transportar",
+      "Indicador de bateria para monitorizar a energia",
+      "Ideal para viagens, trabalho e dia a dia"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "Preciso de levar cabos à parte?",
+        "r": "Não. O power bank tem cabos Micro USB e Tipo-C integrados, além de adaptador para iPhone."
+      },
+      {
+        "p": "Com quais telemóveis é compatível?",
+        "r": "É compatível com dispositivos iOS e Android, cobrindo a maioria dos smartphones do mercado."
+      },
+      {
+        "p": "Como sei quanta bateria resta?",
+        "r": "O indicador LED exibe o nível de carga restante do power bank."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/a96FK0HuAuwc"
+  },
+  {
     "id": "jogo-soquetes-46-pecas",
     "nome": "Jogo de Soquetes Kit 46 Peças com Catraca - Ferramentas Premium",
     "categoria": "Casa",
