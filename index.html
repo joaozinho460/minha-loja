@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRYON · Curadoria premium para a sua rotina</title>
+  <meta name="description" content="A KRYON seleciona produtos práticos, bonitos e funcionais. Design, qualidade e novas experiências para quem valoriza uma rotina melhor." />
+  <meta name="theme-color" content="#f7f6f2" />
+  <meta property="og:title" content="KRYON · Curadoria premium para a sua rotina" />
+  <meta property="og:description" content="Produtos selecionados para quem valoriza design, praticidade e novas experiências." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23171717'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23B8934A' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/kryon.css?v=2" />
+</head>
+<body>
+  <a class="sr-only" href="#main">Pular para o conteúdo</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="KRYON — página inicial">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8934A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v20M6 3l14 20M6 13h8" />
+          </svg>
+        </span>
+        <span>KRYON</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#categorias">Categorias</a>
+        <a href="#destaques">Produtos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn header-search-trigger" id="searchOpen" aria-label="Abrir pesquisa" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+        </button>
+        <button class="icon-btn" id="favOpen" aria-label="Abrir favoritos" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          <span class="badge-count" id="favCount" hidden></span>
+        </button>
+        <button class="icon-btn" id="cartOpen" aria-label="Abrir carrinho" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <path d="M8 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            <path d="M18 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            <path d="M8 6l2-3h4l2 3" />
+          </svg>
+          <span class="badge-count" id="cartCount" hidden></span>
+        </button>
+        <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Menu mobile ===== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8934A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v20M6 3l14 20M6 13h8" />
+          </svg>
+        </span>
+        <span>KRYON</span>
+      </a>
+      <button class="icon-btn" id="mobileMenuClose" aria-label="Fechar menu" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" aria-label="Menu mobile">
+      <a href="#categorias">Categorias</a>
+      <a href="#destaques">Produtos</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="mobile-menu-cats" id="mobileMenuCats"></div>
+  </div>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-label="KRYON — bem-vindo">
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 class="hero-wordmark" id="heroWordmark" aria-label="KRYON"></h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <div class="hero-actions">
+          <a href="#destaques" class="btn btn-primary" id="heroExplore">Explorar produtos</a>
+          <a href="#ofertas" class="btn btn-ghost" id="heroNews">Ver ofertas</a>
+        </div>
+      </div>
+      <a href="#categorias" class="hero-scroll" aria-label="Rolar para baixo">
+        <span>Descubra</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>Design selecionado</span>
+        <span>Curadoria premium</span>
+        <span>Envio acompanhado</span>
+        <span>Novas experiências</span>
+        <span>Praticidade no dia a dia</span>
+      </div>
+    </div>
+
+    <!-- ===== Categorias ===== -->
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-eyebrow">Explore</span>
+            <h2 class="section-title">Categorias</h2>
+            <p class="section-sub">Tudo o que importa para a sua rotina, organizado por tema.</p>
+          </div>
+          <a href="#destaques" class="section-link" data-cat="Ver todos" id="catSeeAll">
+            Ver todos os produtos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Destaques ===== -->
+    <section class="section" id="destaques" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-eyebrow">Escolha da KRYON</span>
+            <h2 class="section-title">Produtos em destaque</h2>
+            <p class="section-sub">Uma seleção pensada a dedo para quem valoriza design, praticidade e novas experiências.</p>
+          </div>
+          <a href="#categorias" class="section-link">
+            Ver todas as categorias
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="products-grid cols-4" id="gridDestaques"></div>
+      </div>
+    </section>
+
+    <!-- ===== Ofertas ===== -->
+    <section class="section" id="ofertas" style="padding-top:0">
+      <div class="container">
+        <div class="deal-banner reveal">
+          <div class="deal-banner-head">
+            <div>
+              <span class="section-eyebrow">Imperdível</span>
+              <h2 class="section-title">Ofertas da semana</h2>
+              <p class="section-sub">Preços especiais em produtos selecionados — por tempo limitado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="products-grid cols-4" id="gridOfertas" style="margin-top:28px"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal" style="justify-content:center; text-align:center">
+          <div style="margin:0 auto">
+            <span class="section-eyebrow" style="justify-content:center">Ajuda</span>
+            <h2 class="section-title">Perguntas frequentes</h2>
+            <p class="section-sub" style="margin-left:auto; margin-right:auto">Tudo o que precisa de saber antes de comprar.</p>
+          </div>
+        </div>
+        <div class="faq-wrap reveal" id="faqWrap"></div>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="newsletter reveal">
+          <span class="section-eyebrow">Novidades no seu e-mail</span>
+          <h2 class="section-title">Entre para o universo KRYON</h2>
+          <p class="section-sub" style="margin-left:auto; margin-right:auto">Receba as novas curadorias e ofertas em primeira mão.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <label class="sr-only" for="newsletterEmail">Seu e-mail</label>
+            <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required />
+            <button type="submit" class="btn btn-gold">Assinar</button>
+          </form>
+          <p class="newsletter-note">Sem spam. Cancele quando quiser.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 26 26" fill="none" stroke="#B8934A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3v20M6 3l14 20M6 13h8" />
+              </svg>
+            </span>
+            <span>KRYON</span>
+          </a>
+          <p class="footer-desc" id="footerDesc"></p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 20.5 12 9M10 12a3 3 0 1 1 5 2.2c-.6.6-1.5.8-2.5.8"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5a5 5 0 0 0 4 5v3a8 8 0 0 1-8-8V4h4v1zM9 13a4 4 0 1 0 0 8 4 4 0 0 0 4-4V9"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Categorias</div>
+          <ul id="footerCats"></ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Institucional</div>
+          <ul>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+            <li><a href="#destaques">Produtos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Atendimento</div>
+          <ul>
+            <li><a href="mailto:ola@kryon.store">ola@kryon.store</a></li>
+            <li><a href="#faq">Envio e entrega</a></li>
+            <li><a href="#faq">Trocas e devoluções</a></li>
+            <li><a href="#faq">Pagamento seguro</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="ano"></span> KRYON. Todos os direitos reservados.</span>
+        <div class="footer-payments" aria-label="Formas de pagamento">
+          <span>PIX</span>
+          <span>Cartão</span>
+          <span>Boleto</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Drawer: carrinho ===== -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        Carrinho
+        <span class="drawer-count" id="cartCountText"></span>
+      </div>
+      <button class="drawer-close" id="cartClose" aria-label="Fechar carrinho" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12z"/><path d="M8 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M18 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M8 6l2-3h4l2 3"/>
+        </svg>
+        <h3>Seu carrinho está vazio</h3>
+        <p>Explore a curadoria KRYON e adicione produtos que merecem fazer parte da sua rotina.</p>
+        <a href="#destaques" class="btn btn-primary btn-sm" id="cartContinue">Explorar produtos</a>
+      </div>
+      <ul class="cart-list" id="cartItems"></ul>
+    </div>
+    <div class="drawer-footer" id="cartFooter" hidden>
+      <div class="drawer-total">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="cartCheckout" type="button">Finalizar compra</button>
+      <p class="drawer-footer-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Pagamento seguro em página externa
+      </p>
+    </div>
+  </aside>
+
+  <!-- ===== Drawer: favoritos ===== -->
+  <div class="drawer-overlay" id="favOverlay"></div>
+  <aside class="drawer" id="favDrawer" aria-label="Favoritos" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        Favoritos
+        <span class="drawer-count" id="favCountText"></span>
+      </div>
+      <button class="drawer-close" id="favClose" aria-label="Fechar favoritos" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-empty" id="favEmpty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <h3>Nenhum favorito ainda</h3>
+        <p>Toque no coração dos produtos que gostar para guardá-los aqui.</p>
+        <a href="#destaques" class="btn btn-primary btn-sm" id="favContinue">Explorar produtos</a>
+      </div>
+      <div class="cart-list" id="favItems" style="gap:12px"></div>
+    </div>
+  </aside>
+
+  <!-- ===== Pesquisa overlay ===== -->
+  <div class="search-overlay" id="searchOverlay" aria-label="Pesquisa" aria-hidden="true">
+    <button class="search-close" id="searchClose" aria-label="Fechar pesquisa" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
+        </svg>
+        <label class="sr-only" for="searchInput">Pesquisar produtos</label>
+        <input type="search" id="searchInput" placeholder="O que procura?" autocomplete="off" />
+      </div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/produtos.js?v=2"></script>
+  <script src="js/cart.js?v=2"></script>
+  <script src="js/ui.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
+</body>
+</html>
