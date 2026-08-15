@@ -19,6 +19,81 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "projetor-mini-yg300",
+    "nome": "Mini Projetor Portátil YG300 Full HD 1080P",
+    "categoria": "Gadgets",
+    "preco": 229.9,
+    "precoAnterior": 279.9,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.2,
+    "avaliacoes": 38,
+    "imagens": [
+      "images/produtos/projetor-mini-yg300-1.jpg",
+      "images/produtos/projetor-mini-yg300-2.jpg",
+      "images/produtos/projetor-mini-yg300-3.jpg",
+      "images/produtos/projetor-mini-yg300-4.jpg",
+      "images/produtos/projetor-mini-yg300-5.jpg",
+      "images/produtos/projetor-mini-yg300-6.jpg",
+      "images/produtos/projetor-mini-yg300-7.jpg"
+    ],
+    "curto": "Transforma qualquer parede num ecrã gigante com este projetor portátil compatível com telemóveis, tablets e computadores.",
+    "descricao": "O Mini Projetor Portátil YG300 leva o cinema para casa. Compatível com iOS, Android, smartphones, tablets, computadores, PS4, TV Stick, DVD e outros dispositivos via HDMI, AV e USB, projeta filmes, séries, jogos e apresentações num ecrã grande com qualidade Full HD 1080P. Compacto e leve, é ideal para noites de cinema, reuniões, aulas e jogos — onde quer que estejas.",
+    "beneficios": [
+      "Resolução Full HD 1080P suportada — imagens nítidas e vibrantes",
+      "Compatível com iOS, Android, smartphone, tablet, portátil, PS4 e TV Stick",
+      "Ligações HDMI, AV e USB para máxima versatilidade",
+      "Compacto e portátil — cinema portátil onde quiseres",
+      "Ideal para filmes, séries, jogos e apresentações",
+      "Brilho de 400 lúmens para ambientes escuros e com pouca luz"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Liga o dispositivo",
+        "texto": "Conecta o projetor ao telemóvel, portátil ou TV Stick através de HDMI, AV ou USB."
+      },
+      {
+        "titulo": "Ajusta o foco",
+        "texto": "Posiciona o projetor e regula a distância e o foco até obteres a imagem perfeita."
+      },
+      {
+        "titulo": "Aproveita o cinema",
+        "texto": "Cria a tua sala de cinema em qualquer parede, em casa ou onde estiveres."
+      }
+    ],
+    "porqueEscolher": [
+      "Ecrã gigante a partir de um aparelho pequeno e prático",
+      "Compatível com a maioria dos dispositivos do dia a dia",
+      "Configuração simples — ligar, ajustar e assistir",
+      "Ótimo para filmes, jogos, aulas e apresentações",
+      "Leve e fácil de transportar para qualquer lado"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "Consigo ligar o meu telemóvel ao projetor?",
+        "r": "Sim. O projetor é compatível com smartphones iOS e Android através de ligação HDMI ou adaptador compatível."
+      },
+      {
+        "p": "Qual é a qualidade de imagem?",
+        "r": "O projetor suporta resolução Full HD 1080P, oferecendo imagens nítidas, especialmente em ambientes com pouca luz."
+      },
+      {
+        "p": "Posso usar para jogos?",
+        "r": "Sim. Podes ligar consolas como a PS4 ou um PC e jogar num ecrã grande."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/rakVtk55w4di"
+  },
+  {
     "id": "depilador-facial-eletrico",
     "nome": "Depilador Facial Elétrico Indolor para Sobrancelhas",
     "categoria": "Lifestyle",
