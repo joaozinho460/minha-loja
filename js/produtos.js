@@ -19,6 +19,83 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "relogio-digital-led-haunt",
+    "nome": "Relógio Digital LED Preto Unissex - HAUNT",
+    "categoria": "Acessórios",
+    "preco": 17.9,
+    "precoAnterior": 29.9,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.2,
+    "avaliacoes": 156,
+    "imagens": [
+      "images/produtos/relogio-digital-led-1.jpg",
+      "images/produtos/relogio-digital-led-2.jpg",
+      "images/produtos/relogio-digital-led-3.jpg",
+      "images/produtos/relogio-digital-led-4.jpg",
+      "images/produtos/relogio-digital-led-5.jpg",
+      "images/produtos/relogio-digital-led-6.jpg",
+      "images/produtos/relogio-digital-led-7.jpg",
+      "images/produtos/relogio-digital-led-8.jpg",
+      "images/produtos/relogio-digital-led-9.jpg"
+    ],
+    "curto": "Relógio digital LED preto com mostrador quadrado e grande, à prova de água e ideal para o dia a dia.",
+    "descricao": "O Relógio Digital LED Preto da HAUNT combina estilo e praticidade. Com mostrador quadrado e grande display LED branco, é perfeito para o dia a dia — na escola, nos jogos ou no trabalho. À prova de água, com pulseira confortável e design unissex, é um relógio resistente e moderno que agrada a crianças, rapazes e raparigas.",
+    "beneficios": [
+      "Display LED branco grande e de leitura fácil",
+      "Design quadrado preto e unissex, com estilo moderno",
+      "À prova de água para o dia a dia",
+      "Pulseira confortável, ideal para uso prolongado",
+      "Perfeito para crianças, rapazes e raparigas",
+      "Leve, resistente e fácil de usar"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Coloca no pulso",
+        "texto": "Ajusta a pulseira ao pulso e fecha com segurança."
+      },
+      {
+        "titulo": "Vê as horas",
+        "texto": "Consulta o mostrador LED branco, claro e de leitura fácil."
+      },
+      {
+        "titulo": "Usa em qualquer ocasião",
+        "texto": "Leva o relógio para a escola, para os jogos ou para o trabalho."
+      }
+    ],
+    "porqueEscolher": [
+      "Leitura fácil graças ao display LED branco e grande",
+      "Design moderno e unissex que combina com tudo",
+      "Resistente à água e ao uso diário",
+      "Ótima opção para crianças e jovens",
+      "Boa relação qualidade-preço"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "O relógio é à prova de água?",
+        "r": "Sim, o relógio é resistente à água, adequado para o uso diário. Evita mergulhos prolongados."
+      },
+      {
+        "p": "Serve para crianças e adultos?",
+        "r": "Sim, o design unissex com pulseira ajustável serve para crianças, jovens e adultos."
+      },
+      {
+        "p": "O mostrador é fácil de ler?",
+        "r": "Sim, o display LED branco é grande e claro, com leitura fácil em qualquer luz."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/4MBJvbhp8zcC"
+  },
+  {
     "id": "massageador-cervical-eletrico",
     "nome": "Mini Massageador Elétrico Portátil Cervical",
     "categoria": "Fitness",
