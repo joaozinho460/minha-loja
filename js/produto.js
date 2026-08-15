@@ -323,6 +323,7 @@ function initMobileBuyBar() {
   const check = function () {
     const show = window.scrollY > 420 && window.innerWidth < 900;
     bar.classList.toggle('show', show);
+    document.body.classList.toggle('has-buybar', show);
   };
   window.addEventListener('scroll', check, { passive: true });
   window.addEventListener('resize', check);
