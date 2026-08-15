@@ -107,20 +107,64 @@ function renderProduto(produto) {
 
 function renderGaleria(produto) {
   const gMain = document.getElementById('gMain');
+  const gVideo = document.getElementById('gVideo');
   const gThumbs = document.getElementById('gThumbs');
-  if (!produto.imagens || !produto.imagens.length) return;
 
-  if (gMain) {
-    gMain.src = produto.imagens[0];
-    gMain.alt = produto.nome;
+  const itens = [];
+  (produto.imagens || []).forEach(function (img) {
+    itens.push({ tipo: 'img', src: img });
+  });
+  (produto.videos || []).forEach(function (v, i) {
+    itens.push({ tipo: 'video', src: v.src, poster: v.poster, titulo: v.titulo || 'Vídeo ' + (i + 1) });
+  });
+
+  if (!itens.length) return;
+
+  function mostrar(item) {
+    if (item.tipo === 'video') {
+      if (gMain) gMain.hidden = true;
+      if (gVideo) {
+        gVideo.hidden = false;
+        gVideo.poster = item.poster;
+        gVideo.src = item.src;
+        gVideo.load();
+        gVideo.play();
+      }
+    } else {
+      if (gVideo) {
+        gVideo.pause();
+        gVideo.removeAttribute('src');
+        gVideo.load();
+        gVideo.hidden = true;
+      }
+      if (gMain) {
+        gMain.hidden = false;
+        gMain.style.opacity = '0';
+        setTimeout(function () {
+          gMain.src = item.src;
+          gMain.alt = produto.nome;
+          gMain.style.opacity = '1';
+        }, 180);
+      }
+    }
   }
 
   if (gThumbs) {
-    gThumbs.innerHTML = produto.imagens
-      .map(function (img, i) {
+    gThumbs.innerHTML = itens
+      .map(function (item, i) {
+        if (item.tipo === 'video') {
+          return (
+            '<button class="gallery-thumb has-video' + (i === 0 ? ' active' : '') + '" data-kind="video" data-src="' + item.src + '" data-poster="' + item.poster + '" aria-label="Ver vídeo: ' + esc(item.titulo) + '" type="button">' +
+            '<img src="' + item.poster + '" alt="' + esc(produto.nome) + ' — vídeo" loading="lazy" decoding="async" />' +
+            '<span class="thumb-play">' +
+            '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>' +
+            '</span>' +
+            '</button>'
+          );
+        }
         return (
-          '<button class="gallery-thumb' + (i === 0 ? ' active' : '') + '" data-src="' + img + '" aria-label="Ver imagem ' + (i + 1) + '" type="button">' +
-          '<img src="' + img + '" alt="' + esc(produto.nome) + ' — imagem ' + (i + 1) + '" loading="lazy" decoding="async" />' +
+          '<button class="gallery-thumb' + (i === 0 ? ' active' : '') + '" data-kind="img" data-src="' + item.src + '" aria-label="Ver imagem ' + (i + 1) + '" type="button">' +
+          '<img src="' + item.src + '" alt="' + esc(produto.nome) + ' — imagem ' + (i + 1) + '" loading="lazy" decoding="async" />' +
           '</button>'
         );
       })
@@ -128,14 +172,11 @@ function renderGaleria(produto) {
 
     gThumbs.querySelectorAll('.gallery-thumb').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        const src = btn.getAttribute('data-src');
-        if (gMain) {
-          gMain.style.opacity = '0';
-          setTimeout(function () {
-            gMain.src = src;
-            gMain.style.opacity = '1';
-          }, 180);
-        }
+        mostrar({
+          tipo: btn.getAttribute('data-kind'),
+          src: btn.getAttribute('data-src'),
+          poster: btn.getAttribute('data-poster')
+        });
         gThumbs.querySelectorAll('.gallery-thumb').forEach(function (b) {
           b.classList.remove('active');
         });
@@ -143,6 +184,8 @@ function renderGaleria(produto) {
       });
     });
   }
+
+  mostrar(itens[0]);
 }
 
 function renderBeneficios(produto) {

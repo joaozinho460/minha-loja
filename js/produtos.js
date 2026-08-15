@@ -1496,6 +1496,95 @@ const PRODUTOS = [
       }
     ],
     "linkPagamento": "https://pay.kaiross.com.br/SIY21eerG4JN"
+  },
+  {
+    "id": "controle-ps4-aj-q04-h",
+    "nome": "Controle Sem Fio Video Game PS4 Bluetooth | AJ-Q04-H",
+    "categoria": "Tecnologia",
+    "preco": 99.99,
+    "precoAnterior": null,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.3,
+    "avaliacoes": 7316,
+    "imagens": [
+      "images/produtos/controle-ps4-1.jpg",
+      "images/produtos/controle-ps4-2.jpg",
+      "images/produtos/controle-ps4-3.jpg"
+    ],
+    "videos": [
+      {
+        "src": "images/produtos/controle-ps4-video1.mp4",
+        "poster": "images/produtos/controle-ps4-video1-poster.jpg",
+        "titulo": "Apresentação do produto"
+      },
+      {
+        "src": "images/produtos/controle-ps4-video2.mp4",
+        "poster": "images/produtos/controle-ps4-video2-poster.jpg",
+        "titulo": "Controle DualShock 4 em ação"
+      }
+    ],
+    "curto": "Controle sem fio para PlayStation 4 com iluminação LED, conexão wireless estável e design ergonômico — jogue com liberdade e estilo.",
+    "descricao": "Controle Sem Fio para PlayStation 4 - Com Iluminação LED e Conexão Wireless. Transforme sua jogabilidade com o Controle Sem Fio para PlayStation 4, projetado para oferecer máxima liberdade, conforto e estilo durante suas sessões de jogo. Com uma conexão estável e recursos modernos, ele é o parceiro perfeito para gamers que buscam desempenho e praticidade. Entrada P2 para fone na parte inferior do controle, conexão wireless estável, iluminação LED personalizada, design ergonômico, função responsiva, bateria recarregável de longa duração e compatibilidade exclusiva com todos os jogos da plataforma.",
+    "beneficios": [
+      "Entrada P2 para fone de ouvido na parte inferior do controle",
+      "Conexão wireless estável — jogue sem restrições com liberdade de movimento",
+      "Iluminação LED personalizada, ideal para ambientes com pouca luz",
+      "Design ergonômico que se ajusta perfeitamente às mãos",
+      "Função responsiva com comandos precisos e rápida resposta",
+      "Bateria recarregável de longa duração, carregamento via cabo USB",
+      "Compatível com todos os jogos e acessórios do PlayStation 4",
+      "Alcance de até 8 metros de distância"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Conecta sem fio",
+        "texto": "Pareia o controle com o PlayStation 4 via Bluetooth e jogue sem cabos, com conexão estável."
+      },
+      {
+        "titulo": "Joga com estilo",
+        "texto": "Aproveita a iluminação LED, os comandos precisos e o design ergonômico em cada sessão."
+      },
+      {
+        "titulo": "Recarrega quando precisar",
+        "texto": "Quando a bateria acabar, carrega o controle via cabo USB (não incluso) para continuar jogando."
+      }
+    ],
+    "porqueEscolher": [
+      "Liberdade de movimento — jogue sem se preocupar com cabos",
+      "Estilo moderno com iluminação LED que se destaca no setup",
+      "Conforto duradouro com design ergonômico",
+      "Desempenho superior com comandos precisos e resposta rápida",
+      "Compatibilidade total com todos os jogos do PlayStation 4"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "O controle funciona em qualquer PlayStation 4?",
+        "r": "Sim. O controle é compatível com todos os modelos de PlayStation 4 e com todos os jogos da plataforma."
+      },
+      {
+        "p": "A conexão é com fio ou sem fio?",
+        "r": "A conexão é sem fio (wireless) via Bluetooth, com alcance de até 8 metros de distância."
+      },
+      {
+        "p": "Como carrego o controle?",
+        "r": "O controle possui bateria recarregável de longa duração e carrega via cabo USB (não incluso)."
+      },
+      {
+        "p": "Posso usar fone de ouvido no controle?",
+        "r": "Sim. O controle tem entrada P2 para fone na parte inferior, permitindo conectar seus fones diretamente."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/RQs6xPSXbxZC"
   }
 ];
 
