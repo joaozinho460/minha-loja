@@ -19,6 +19,79 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "depilador-facial-eletrico",
+    "nome": "Depilador Facial Elétrico Indolor para Sobrancelhas",
+    "categoria": "Lifestyle",
+    "preco": 21.7,
+    "precoAnterior": null,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.2,
+    "avaliacoes": 314,
+    "imagens": [
+      "images/produtos/depilador-facial-1.jpg",
+      "images/produtos/depilador-facial-2.jpg",
+      "images/produtos/depilador-facial-3.jpg",
+      "images/produtos/depilador-facial-4.jpg",
+      "images/produtos/depilador-facial-5.jpg"
+    ],
+    "curto": "Remova pelos do rosto de forma indolor e precisa, com um depilador facial elétrico compacto e elegante.",
+    "descricao": "O Depilador Facial Elétrico Indolor para Sobrancelhas remove pelos indesejados do rosto com precisão e sem dor. Ideal para sobrancelhas, buço e outras áreas sensíveis, ele atua removendo os pelos pela raiz com toques suaves e rápidos — sem cortes, sem puxões e sem irritação. Com design moderno e portátil, mede apenas 13 cm x 1,5 cm e vem na cor branca com detalhes dourados, perfeito para levar na bolsa e usar onde quiser.",
+    "beneficios": [
+      "Remoção de pelos pela raiz com toques suaves — sem dor",
+      "Perfeito para sobrancelhas, buço e áreas sensíveis do rosto",
+      "Design moderno e portátil (13 cm x 1,5 cm) — cabe na bolsa",
+      "Cor branca com detalhes dourados — elegante e discreto",
+      "Sem cortes, sem puxões e sem irritação na pele",
+      "Recarregável, acompanha cabo de carregamento"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Prepare a pele",
+        "texto": "Comece com o rosto limpo e seco para garantir um deslize suave e melhores resultados."
+      },
+      {
+        "titulo": "Deslize na área",
+        "texto": "Incline suavemente o depilador sobre a sobrancelha ou o buço e faça movimentos leves, sem pressionar."
+      },
+      {
+        "titulo": "Aproveite o resultado",
+        "texto": "Os pelos são removidos pela raiz com toques rápidos, deixando a pele lisinha e sem dor."
+      }
+    ],
+    "porqueEscolher": [
+      "Depilação facial indolor, sem o desconforto da cera ou da pinça",
+      "Resultados precisos nas sobrancelhas e no buço",
+      "Tamanho compacto que acompanha você no dia a dia",
+      "Acabamento premium em branco com detalhes dourados",
+      "Prático e fácil de usar em casa"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "O depilador é realmente indolor?",
+        "r": "Sim. Ele remove os pelos pela raiz com toques suaves e rápidos, sem puxar ou cortar, o que torna a depilação praticamente indolor."
+      },
+      {
+        "p": "Posso usar nas sobrancelhas e no buço?",
+        "r": "Sim. O produto foi desenvolvido para áreas sensíveis do rosto, como sobrancelhas e buço."
+      },
+      {
+        "p": "O produto é recarregável?",
+        "r": "Sim. O depilador acompanha cabo de carregamento, tornando o uso prático no dia a dia."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": null
+  },
+  {
     "id": "luminaria-solar-jardim",
     "nome": "Luminária Solar de Parede para Jardim",
     "categoria": "Iluminação",
