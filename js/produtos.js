@@ -19,6 +19,83 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "jogo-soquetes-46-pecas",
+    "nome": "Jogo de Soquetes Kit 46 Peças com Catraca - Ferramentas Premium",
+    "categoria": "Casa",
+    "preco": 28.4,
+    "precoAnterior": null,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.9,
+    "avaliacoes": 87,
+    "imagens": [
+      "images/produtos/conjunto-soquetes-46-1.jpg",
+      "images/produtos/conjunto-soquetes-46-2.jpg",
+      "images/produtos/conjunto-soquetes-46-3.jpg",
+      "images/produtos/conjunto-soquetes-46-4.jpg",
+      "images/produtos/conjunto-soquetes-46-5.jpg",
+      "images/produtos/conjunto-soquetes-46-6.jpg",
+      "images/produtos/conjunto-soquetes-46-7.jpg",
+      "images/produtos/conjunto-soquetes-46-8.jpg",
+      "images/produtos/conjunto-soquetes-46-9.jpg"
+    ],
+    "curto": "Kit completo com 46 peças, soquetes de 4 a 14 mm e catraca reversível em estojo premium — ideal para reparos automotivos e domésticos.",
+    "descricao": "O Jogo de Soquetes Kit 46 Peças é a solução completa para reparos automotivos, domésticos e projetos DIY. Fabricado com aço vanádio cromado premium, oferece resistência ao desgaste e acabamento espelhado que protege contra ferrugem. Inclui soquetes métricos de 4 a 14 mm, pontas PH, PZ, HEX e Torx, extensões rígidas e flexíveis, barra em T deslizante e cabo de catraca reversível com empunhadura emborrachada antiderrapante. Tudo organizado num estojo moldado ultra resistente.",
+    "beneficios": [
+      "Fabricado em aço vanádio cromado premium, resistente ao desgaste e à ferrugem",
+      "Kit completo com 46 peças: soquetes, bits, chaves, extensões, adaptador e catraca",
+      "Soquetes de 4 a 14 mm e pontas PH, PZ, HEX e Torx para qualquer tarefa",
+      "Extensões rígidas e flexíveis, barra em T deslizante e cabo giratório",
+      "Catraca reversível com liberação rápida e empunhadura antiderrapante",
+      "Estojo moldado ultra resistente que organiza e protege as peças"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Escolhe a peça",
+        "texto": "Seleciona o soquete, bit ou chave adequada ao parafuso e encaixa na catraca."
+      },
+      {
+        "titulo": "Aperta ou desaperta",
+        "texto": "Usa a catraca reversível com empunhadura confortável para girar o encaixe com controlo."
+      },
+      {
+        "titulo": "Guarda organizado",
+        "texto": "Guarda tudo no estojo premium, que mantém cada peça no lugar e facilita o transporte."
+      }
+    ],
+    "porqueEscolher": [
+      "Cobertura total para reparos automotivos e domésticos",
+      "Aço cromado premium com acabamento espelhado e proteção contra ferrugem",
+      "Acesso a locais apertados com extensões e barra em T",
+      "Catraca reversível com liberação rápida e empunhadura confortável",
+      "Estojo robusto que organiza e protege as 46 peças"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "Quais tamanhos de soquete estão incluídos?",
+        "r": "O kit inclui soquetes métricos de 4 a 14 mm, além de pontas PH, PZ, HEX e Torx."
+      },
+      {
+        "p": "Serve para reparos automotivos?",
+        "r": "Sim. O conjunto foi pensado para reparos automotivos e domésticos, cobrindo a maioria das tarefas do dia a dia."
+      },
+      {
+        "p": "O material é resistente?",
+        "r": "Sim. As peças são fabricadas em aço vanádio cromado premium, com acabamento espelhado que protege contra ferrugem."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/cs7LwT9qpbVV"
+  },
+  {
     "id": "modelador-cabelo-5em1-klack",
     "nome": "Modelador de Cabelo 5 em 1 Klack - Volumizador e Rizos",
     "categoria": "Lifestyle",
