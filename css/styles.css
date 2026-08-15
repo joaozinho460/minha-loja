@@ -1754,6 +1754,13 @@ h4 {
   appearance: textfield;
 }
 
+.cart-item-buy {
+  margin-top: 2px;
+  align-self: flex-start;
+  font-size: 12.5px;
+  padding: 8px 14px;
+}
+
 .cart-item-side {
   grid-area: side;
   display: flex;
