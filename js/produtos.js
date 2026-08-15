@@ -19,6 +19,81 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "massageador-cervical-eletrico",
+    "nome": "Mini Massageador Elétrico Portátil Cervical",
+    "categoria": "Fitness",
+    "preco": 21.99,
+    "precoAnterior": null,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.7,
+    "avaliacoes": 241,
+    "imagens": [
+      "images/produtos/massageador-cervical-1.jpg",
+      "images/produtos/massageador-cervical-2.jpg",
+      "images/produtos/massageador-cervical-3.jpg",
+      "images/produtos/massageador-cervical-4.jpg",
+      "images/produtos/massageador-cervical-5.jpg",
+      "images/produtos/massageador-cervical-6.jpg",
+      "images/produtos/massageador-cervical-7.jpg",
+      "images/produtos/massageador-cervical-8.jpg"
+    ],
+    "curto": "Alivia dores no pescoço, ombros e corpo com um massageador elétrico compacto e fácil de levar para qualquer lado.",
+    "descricao": "O Mini Massageador Elétrico Portátil Cervical traz alívio imediato para o pescoço, ombros, costas e outras zonas do corpo. Compacto e discreto, funciona por percussão para descontrair a musculatura e reduzir a tensão do dia a dia, seja no trabalho, em casa ou a viajar. Fácil de usar, é o companheiro ideal para quem passa muitas horas sentado ou sente dores por stress e má postura.",
+    "beneficios": [
+      "Massagem por percussão que relaxa a musculatura",
+      "Adequado para pescoço, ombros, costas e corpo",
+      "Compacto e portátil — cabe na mala ou mochila",
+      "Alivia dores e tensão causadas por stress e má postura",
+      "Simples de usar, com funcionamento prático",
+      "Ótimo para usar no trabalho, em casa ou a viajar"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Posiciona o massageador",
+        "texto": "Encosta o massageador na zona dolorida — pescoço, ombros ou costas."
+      },
+      {
+        "titulo": "Liga e massaja",
+        "texto": "Aciona o aparelho e desliza suavemente pela zona a tratar, sentindo o relaxamento."
+      },
+      {
+        "titulo": "Relaxa e repete",
+        "texto": "Usa diariamente para aliviar a tensão muscular e melhorar o bem-estar."
+      }
+    ],
+    "porqueEscolher": [
+      "Alívio rápido da tensão muscular no dia a dia",
+      "Tamanho pequeno que acompanha toda a rotina",
+      "Ideal para quem trabalha sentado ou sofre de dores de postura",
+      "Presente prático e útil para a saúde e bem-estar"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "Onde posso usar o massageador?",
+        "r": "Pode ser usado no pescoço, ombros, costas e outras zonas do corpo onde sinta tensão ou dor muscular."
+      },
+      {
+        "p": "É fácil de transportar?",
+        "r": "Sim. O aparelho é compacto e leve, cabendo facilmente na mala, mochila ou bolsa."
+      },
+      {
+        "p": "Quantas vezes por dia posso usar?",
+        "r": "Pode usar sempre que sentir necessidade. Recomenda-se sessões curtas de alguns minutos em cada zona."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/c3RxlEoUiKtP"
+  },
+  {
     "id": "projetor-mini-yg300",
     "nome": "Mini Projetor Portátil YG300 Full HD 1080P",
     "categoria": "Gadgets",
