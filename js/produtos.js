@@ -89,7 +89,7 @@ const PRODUTOS = [
         "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
       }
     ],
-    "linkPagamento": null
+    "linkPagamento": "https://pay.kaiross.com.br/MIcMEprJxM78"
   },
   {
     "id": "luminaria-solar-jardim",
