@@ -767,6 +767,82 @@ const PRODUTOS = [
     ],
     kairosLink: 'https://pay.kaiross.com.br/Y7VabRy5REws',
   },
+  {
+    id: 'joelheiras-compressao-ortopedica',
+    nome: 'PAR de Joelheiras de Compressão Ortopédica - MWKS 6906',
+    categoria: 'Saúde & Bem-estar',
+    preco: 39.05,
+    precoAnterior: 44.91,
+    desconto: null,
+    destaque: true,
+    bestseller: false,
+    imagens: [
+      'images/produtos/joelheira-41AJd4h8VtL.jpg',
+      'images/produtos/joelheira-51zMu6a7TJL.jpg',
+      'images/produtos/joelheira-51voTcr3ApL.jpg',
+      'images/produtos/joelheira-51Z6lJVYNkL.jpg',
+      'images/produtos/joelheira-51VXK8sNipL.jpg',
+      'images/produtos/joelheira-51sFjP31BYL.jpg',
+      'images/produtos/joelheira-51Mn1Q8kkFL.jpg',
+    ],
+    curto: 'Kit com 2 joelheiras de compressão ortopédica que aliviam dores, dão firmeza ao joelho e ajudam a prevenir lesões durante os esportes.',
+    descricao:
+      'O PAR de Joelheiras de Compressão Ortopédica MWKS 6906 oferece modelagem anatômica e ajuste preciso, auxiliando na prevenção do desgaste muscular. Durante atividades físicas como a corrida, o ponto de fadiga tende a ser postergado, resultando em melhor desempenho atlético e menor impacto muscular. A alta elasticidade proporciona aquecimento constante e compressão na área aplicada, contribuindo para a redução da dor e uma recuperação mais eficiente. O fecho de velcro permite um ajuste seguro e confortável, sem restringir os movimentos, e o design unissex serve para homens e mulheres.',
+    beneficios: [
+      'Alivia dores e desconfortos no joelho com compressão ortopédica',
+      'Ajuda a prevenir lesões e a recuperar de problemas anteriores',
+      'Otimiza o fornecimento de oxigênio aos músculos e reduz o acúmulo de lactato',
+      'Minimiza câimbras e atenua a fadiga muscular',
+      'Fecho de velcro com ajuste rápido, seguro e confortável',
+      'Material antistático de alta elasticidade com aquecimento constante',
+      'Ideal para futebol, vôlei, basquete, tênis, corrida, ciclismo e skate',
+    ],
+    comoFunciona: [
+      { titulo: 'Coloca a joelheira', texto: 'Desliza a joelheira sobre o joelho e posiciona na área que precisa de suporte.' },
+      { titulo: 'Ajusta o velcro', texto: 'Regula o fecho de velcro até obter a compressão ideal, sem restringir os movimentos.' },
+      { titulo: 'Treina protegido', texto: 'Durante a atividade, a compressão aquece e dá firmeza ao joelho, aliviando dores e prevenindo lesões.' },
+    ],
+    porqueEscolher: [
+      'Kit com 2 joelheiras de compressão ortopédica',
+      'Alivia dores e dá firmeza ao joelho durante os esportes',
+      'Fecho de velcro com ajuste rápido e seguro',
+      'Alta elasticidade com aquecimento constante na área aplicada',
+      'Material antistático, confortável e durável',
+      'Tamanho único: perna de 45 a 55 cm · peso de 60 a 85 kg',
+    ],
+    disponibilidade: { texto: 'Em stock · pronto a enviar', nivel: 'stock' },
+    faq: [
+      {
+        p: 'Quantas joelheiras vem no kit?',
+        r: 'O kit inclui 2 joelheiras de compressão ortopédica.',
+      },
+      {
+        p: 'Para que serve a joelheira de compressão?',
+        r: 'Ela ajuda a aliviar dores, dar firmeza ao joelho, prevenir lesões e melhorar o desempenho durante atividades físicas.',
+      },
+      {
+        p: 'Qual é o tamanho?',
+        r: 'Tamanho único. Altura de 27 cm, largura de 17 cm, recomendada para circunferência de perna de 45 a 55 cm e peso de 60 a 85 kg.',
+      },
+      {
+        p: 'Posso usar em qualquer esporte?',
+        r: 'Sim. É ideal para futebol, vôlei, basquete, tênis, corrida, ciclismo, skate, entre outros esportes.',
+      },
+      {
+        p: 'O produto é unissex?',
+        r: 'Sim. O design unissex serve para homens e mulheres.',
+      },
+      {
+        p: 'Como devo cuidar das joelheiras?',
+        r: 'Recomenda-se lavar à mão e deixar secar à sombra, evitando produtos químicos agressivos.',
+      },
+      {
+        p: 'Qual é o prazo de entrega?',
+        r: 'O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização.',
+      },
+    ],
+    kairosLink: 'https://pay.kaiross.com.br/SIY21eerG4JN',
+  },
 ];
 
 /* ============================================================
