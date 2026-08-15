@@ -19,6 +19,80 @@ const LOJA = {
 
 const PRODUTOS = [
   {
+    "id": "modelador-cabelo-5em1-klack",
+    "nome": "Modelador de Cabelo 5 em 1 Klack - Volumizador e Rizos",
+    "categoria": "Lifestyle",
+    "preco": 139.9,
+    "precoAnterior": 179.9,
+    "desconto": null,
+    "destaque": true,
+    "novidade": true,
+    "avaliacao": 4.3,
+    "avaliacoes": 187,
+    "imagens": [
+      "images/produtos/modelador-cabelo-5em1-1.jpg",
+      "images/produtos/modelador-cabelo-5em1-2.jpg",
+      "images/produtos/modelador-cabelo-5em1-3.jpg",
+      "images/produtos/modelador-cabelo-5em1-4.jpg",
+      "images/produtos/modelador-cabelo-5em1-5.jpg",
+      "images/produtos/modelador-cabelo-5em1-6.jpg"
+    ],
+    "curto": "Secador, modelador, ferro e escova num só aparelho — cria volume, rizos e ondulação com tecnologia de íons negativos.",
+    "descricao": "O Modelador 5 em 1 Klack® combina secador, modelador, ferro e escova numa única ferramenta de ar quente. Perfeito para secar e pentear o cabelo enquanto cria volume com facilidade. A tecnologia de íons negativos satura o fluxo de ar, ajudando a condicionar o cabelo, nutrir os fios danificados, reduzir a estática e deixar o cabelo brilhante, macio e fácil de pentear.",
+    "beneficios": [
+      "Multifuncional 5 em 1 — secador, modelador, ferro e escova num só aparelho",
+      "Escova de ar quente que seca, penteia e dá volume ao cabelo",
+      "Cria rizos e ondulação com facilidade",
+      "Tecnologia de íons negativos que condiciona e nutre o cabelo",
+      "Reduz o frizz e a estática, deixando o cabelo brilhante e macio",
+      "Prático para usar em casa todos os dias"
+    ],
+    "comoFunciona": [
+      {
+        "titulo": "Secar e desembaraçar",
+        "texto": "Usa a escova de ar quente para secar o cabelo enquanto desembaraça e alinha os fios."
+      },
+      {
+        "titulo": "Modelar",
+        "texto": "Cria volume na raiz e modela rizos ou ondulação conforme o teu gosto."
+      },
+      {
+        "titulo": "Finalizar",
+        "texto": "Os íons negativos selam a cutícula, deixando o cabelo brilhante, macio e sem estática."
+      }
+    ],
+    "porqueEscolher": [
+      "5 ferramentas numa só — poupa espaço e tempo",
+      "Volume e modelação profissionais em casa",
+      "Tecnologia de íons negativos para cabelos mais saudáveis",
+      "Reduz o frizz e melhora o brilho natural",
+      "Fácil de usar no dia a dia"
+    ],
+    "disponibilidade": {
+      "texto": "Em stock · pronto a enviar",
+      "nivel": "stock"
+    },
+    "faq": [
+      {
+        "p": "Posso usar em cabelo molhado?",
+        "r": "Sim. A escova de ar quente foi desenhada para secar e pentear o cabelo, podendo ser usada com o cabelo húmido."
+      },
+      {
+        "p": "Funciona em cabelos finos ou grossos?",
+        "r": "Sim. O modelador 5 em 1 adapta-se a diferentes tipos de cabelo, criando volume e modelação."
+      },
+      {
+        "p": "A tecnologia de íons negativos faz diferença?",
+        "r": "Sim. Os íons negativos ajudam a condicionar o cabelo, reduzir a estática e aumentar o brilho."
+      },
+      {
+        "p": "Qual é o prazo de entrega?",
+        "r": "O prazo de entrega é de 7 a 15 dias úteis após a confirmação do pagamento, dependendo da sua localização."
+      }
+    ],
+    "linkPagamento": "https://pay.kaiross.com.br/UrtAZHNzPYHT"
+  },
+  {
     "id": "relogio-digital-led-haunt",
     "nome": "Relógio Digital LED Preto Unissex - HAUNT",
     "categoria": "Acessórios",
