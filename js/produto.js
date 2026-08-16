@@ -292,6 +292,7 @@ function initProductPage() {
   initCart();
 
   renderProduto(produto);
+  if (window.KRYON_Pixel) window.KRYON_Pixel.trackViewContent(produto);
   renderGaleria(produto);
   renderBeneficios(produto);
   renderComoFunciona(produto);

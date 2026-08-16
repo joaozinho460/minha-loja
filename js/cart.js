@@ -60,6 +60,7 @@ function cartAdd(id, qtd) {
   cartSave(items);
   updateCartBadge();
   renderCartDrawer();
+  if (window.KRYON_Pixel) window.KRYON_Pixel.trackAddToCart(produtoPorId(id), qtd || 1);
 }
 
 function cartSetQty(id, qtd) {
@@ -394,6 +395,7 @@ function initCartCheckout() {
     }
     const p = produtoPorId(items[0].id);
     if (p && p.linkPagamento) {
+      if (window.KRYON_Pixel) window.KRYON_Pixel.trackInitiateCheckout(items);
       window.open(p.linkPagamento, '_blank', 'noopener,nofollow');
     }
   });
