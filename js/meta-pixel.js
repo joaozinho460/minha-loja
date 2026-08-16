@@ -8,6 +8,15 @@
 window.KRYON_Pixel = (function () {
   const moeda = 'BRL';
 
+  const ultimoEvento = {};
+
+  function podeDisparar(chave) {
+    const agora = Date.now();
+    if (ultimoEvento[chave] && agora - ultimoEvento[chave] < 1000) return false;
+    ultimoEvento[chave] = agora;
+    return true;
+  }
+
   function produtoPorIdSafely(id) {
     return typeof produtoPorId === 'function' ? produtoPorId(id) : null;
   }
@@ -57,6 +66,8 @@ window.KRYON_Pixel = (function () {
         numItems += parseInt(it.qtd, 10) || 1;
       });
       if (!ids.length) return;
+      const chave = 'ic:' + ids.slice().sort().join('|');
+      if (!podeDisparar(chave)) return;
       fbq('track', 'InitiateCheckout', {
         content_type: 'product',
         content_ids: ids,
@@ -73,6 +84,7 @@ window.KRYON_Pixel = (function () {
         if (it && it.id) ids.push(it.id);
       });
       if (!ids.length) return;
+      if (!podeDisparar('purchase')) return;
       fbq('track', 'Purchase', {
         content_type: 'product',
         content_ids: ids,

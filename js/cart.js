@@ -215,7 +215,7 @@ function renderCartDrawer() {
       '<div class="cart-item-bottom">' +
       '<span class="cart-item-total">' + preco(p.preco * (parseInt(it.qtd, 10) || 1)) + '</span>' +
       (p.linkPagamento
-        ? '<a class="btn btn-gold btn-sm cart-item-buy" href="' + p.linkPagamento + '" target="_blank" rel="noopener nofollow">Comprar agora</a>'
+        ? '<a class="btn btn-gold btn-sm cart-item-buy" href="' + p.linkPagamento + '" target="_blank" rel="noopener nofollow" data-buy-now="' + p.id + '">Comprar agora</a>'
         : '<span class="btn btn-sm cart-item-buy" style="opacity:.55;cursor:not-allowed" title="Em breve">Em breve</span>') +
       '</div>' +
       '</div>';
@@ -317,6 +317,21 @@ function initGlobalEvents() {
         setTimeout(function () {
           addBtn.classList.remove('added');
         }, 600);
+      }
+      return;
+    }
+
+    const buyNow = e.target.closest('[data-buy-now]');
+    if (buyNow) {
+      const id = buyNow.getAttribute('data-buy-now');
+      const p = produtoPorId(id);
+      if (p && window.KRYON_Pixel) {
+        let qtd = 1;
+        const item = cartGet().filter(function (it) {
+          return it.id === id;
+        })[0];
+        if (item) qtd = parseInt(item.qtd, 10) || 1;
+        window.KRYON_Pixel.trackInitiateCheckout([{ id: p.id, qtd: qtd }]);
       }
       return;
     }

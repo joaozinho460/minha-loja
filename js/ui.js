@@ -76,7 +76,7 @@ function renderProductCard(produto, extraClass) {
     '<div class="product-card-actions">' +
     '<button class="card-add-btn" data-add-cart="' + produto.id + '" type="button">' + ICONS.cart + ' Adicionar</button>' +
     (produto.linkPagamento
-      ? '<a class="card-buy-link" href="' + produto.linkPagamento + '" target="_blank" rel="noopener nofollow">Comprar agora</a>'
+      ? '<a class="card-buy-link" href="' + produto.linkPagamento + '" target="_blank" rel="noopener nofollow" data-buy-now="' + produto.id + '">Comprar agora</a>'
       : '<span class="card-buy-link" style="opacity:.55;cursor:not-allowed" title="Em breve">Em breve</span>') +
     '</div>' +
     '</div>' +

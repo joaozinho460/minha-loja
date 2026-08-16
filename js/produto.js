@@ -60,6 +60,8 @@ function renderProduto(produto) {
     if (produto.linkPagamento) {
       pdBuyBtn.hidden = false;
       pdBuyBtn.addEventListener('click', function () {
+        const qtd = parseInt((document.getElementById('cartQty') || {}).value, 10) || 1;
+        if (window.KRYON_Pixel) window.KRYON_Pixel.trackInitiateCheckout([{ id: produto.id, qtd: qtd }]);
         window.open(produto.linkPagamento, '_blank', 'noopener,nofollow');
       });
     } else {
@@ -71,6 +73,8 @@ function renderProduto(produto) {
     if (produto.linkPagamento) {
       mbbBuy.hidden = false;
       mbbBuy.addEventListener('click', function () {
+        const qtd = parseInt((document.getElementById('cartQty') || {}).value, 10) || 1;
+        if (window.KRYON_Pixel) window.KRYON_Pixel.trackInitiateCheckout([{ id: produto.id, qtd: qtd }]);
         window.open(produto.linkPagamento, '_blank', 'noopener,nofollow');
       });
     } else {
