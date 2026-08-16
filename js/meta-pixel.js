@@ -1,28 +1,7 @@
 /* ============================================================
-   KRYON · Meta Pixel (Facebook / Instagram)
-   Pixel ID: 1066936762934805
-   Carregado em todas as páginas (index.html e produto.html).
+   KRYON · Meta Pixel (Facebook / Instagram) — eventos de e-commerce
+   O código base do pixel está no <head> de index.html e produto.html.
    ============================================================ */
-
-!function (f, b, e, v, n, t, s) {
-  if (f.fbq) return;
-  n = f.fbq = function () {
-    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-  };
-  if (!f._fbq) f._fbq = n;
-  n.push = n;
-  n.loaded = !0;
-  n.version = '2.0';
-  n.queue = [];
-  t = b.createElement(e);
-  t.async = !0;
-  t.src = v;
-  s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s);
-}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1066936762934805');
-fbq('track', 'PageView');
 
 /* ---------- Eventos de e-commerce (dados reais da loja) ---------- */
 
