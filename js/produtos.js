@@ -171,8 +171,8 @@ const PRODUTOS = [
     "id": "modelador-cabelo-5em1-klack",
     "nome": "Modelador de Cabelo 5 em 1 Klack - Volumizador e Rizos",
     "categoria": "Lifestyle",
-    "preco": 139.9,
-    "precoAnterior": 179.9,
+    "preco": 95.0,
+    "precoAnterior": 109.25,
     "desconto": null,
     "destaque": true,
     "novidade": true,
@@ -184,7 +184,10 @@ const PRODUTOS = [
       "images/produtos/modelador-cabelo-5em1-3.jpg",
       "images/produtos/modelador-cabelo-5em1-4.jpg",
       "images/produtos/modelador-cabelo-5em1-5.jpg",
-      "images/produtos/modelador-cabelo-5em1-6.jpg"
+      "images/produtos/modelador-cabelo-5em1-6.jpg",
+      "images/produtos/modelador-cabelo-5em1-7.jpg",
+      "images/produtos/modelador-cabelo-5em1-8.jpg",
+      "images/produtos/modelador-cabelo-5em1-9.jpg"
     ],
     "curto": "Secador, modelador, ferro e escova num só aparelho — cria volume, rizos e ondulação com tecnologia de íons negativos.",
     "descricao": "O Modelador 5 em 1 Klack® combina secador, modelador, ferro e escova numa única ferramenta de ar quente. Perfeito para secar e pentear o cabelo enquanto cria volume com facilidade. A tecnologia de íons negativos satura o fluxo de ar, ajudando a condicionar o cabelo, nutrir os fios danificados, reduzir a estática e deixar o cabelo brilhante, macio e fácil de pentear.",
